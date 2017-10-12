@@ -1,0 +1,18 @@
+<p>index 4</p>
+<h1>New Post</h1>
+<div>
+    <form action='<%= create_post_path %>' method='post'>
+        <input type='hidden' name='authenticity_token' value='<%= form_authenticity_token %>'>
+        <div>
+        Title: <input type='text' name='post[title]'>
+        </div>
+        <div>
+        Content: <textarea name='post[comment]'></textarea>
+        </div>
+        <div>
+        Author: <input type='text' name='post[author]'>
+        </div>
+        <input type='submit' value='Submit'>
+    </form>
+    
+</div>

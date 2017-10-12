@@ -1,0 +1,7 @@
+<h1>Add your name please: </h1>
+
+<form action="<%= users_create_path %>" method="post">
+  <input type="hidden" name='authenticity_token' value="<%= form_authenticity_token %>">
+  <input type="text" name="user[name]">
+  <input type="submit">
+</form>

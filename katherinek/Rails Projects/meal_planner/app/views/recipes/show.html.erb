@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Recipe Details</title>
+</head>
+<body>
+	<h2>Recipe for <%= @recipe.name %></h2>
+	<p>Description: <%= @recipe.desc %></p>
+	<p>Prep Time: <%= @recipe.preptime %></p>
+	<p>Cook Time: <%= @recipe.cooktime %></p>
+	<p>Directions: <%= @recipe.directions %></p>
+	<p>Notes: <%= @recipe.notes %></p>
+	<p>Source: <%= @recipe.source %></p>
+	<p>Meal Time: <%= @recipe.mealtime %></p>
+	<p>Cuisine: <%= @recipe.cuisine %></p>
+	<p>Holiday: <%= @recipe.holiday %></p>
+
+	<p><a href="/recipes/<%= @recipe.id %>/edit">Edit</a></p>
+	<p>
+
+	<a href="/ingredients/new">Add Ingredients</a>
+		
+		<form action="/recipes/<%= @recipe.id %>/delete" method="post">
+		<input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+		<input type="hidden" name="_method" value="delete">
+		<input type="submit" name="delete" value="delete">
+	</form>
+	</p>
+</body>
+</html>
+

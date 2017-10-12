@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Cook Book</title>
+</head>
+<body>
+	<p>Time: <%= @time %> | Date <%= Time.now.strftime("%d:%m:%Y") %>
+
+
+	<h2>Welcome to your Cook Book</h2>
+
+	<a href="/recipes/new">Add a new dish</a>
+
+	<p>Search for a </p>	
+
+	<h3>Dishes:</h3>
+
+	<table>
+		<thead>
+			<tr>
+				<th>Name:</th>
+				<th>Description:</th>
+				<th>Time:</th>
+				<th>Options:</th>
+			</tr>
+		</thead>
+		<tbody>
+			<% @recipes.each do |recipe| %>
+			<tr>
+				<td><a href="/recipes/<%= recipe.id %>/show">
+				<%= recipe.name%></a></td>
+				<td><%= recipe.desc %></td>
+				<td>Prep:<%= recipe.preptime %>, Cook: <%= recipe.cooktime %></td>
+				<td><a href="/recipes/<%= recipe.id %>/edit">Edit</a> | Add to Meal Plan</td>
+			</tr>
+			<% end %>
+		</tbody>
+	</table>
+
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <% if flash[:submissions] %>
+      <div class="green">
+        <p>Thanks for submitting this form. You have submitted this form <%= flash[:submissions] %> times.</p>
+      </div>
+    <% end %>
+    <h2>Submitted Information</h2>
+    <table>
+      <tr>
+        <td>Name:</td>
+        <td><%= @surveyy.name %></td>
+      </tr>
+      <tr>
+        <td>Dojo Location:</td>
+        <td><%= @surveyy.location %></td>
+      </tr>
+      <tr>
+        <td>Favorite Language:</td>
+        <td><%= @surveyy.language %></td>
+      </tr>
+      <tr>
+        <td>Comment:</td>
+        <td><%= @surveyy.comment %></td>
+      </tr>
+    </table>
+  </body>
+</html>

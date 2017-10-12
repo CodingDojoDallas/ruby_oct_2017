@@ -1,0 +1,20 @@
+index 1
+<div>
+    <form action='<%= create_user_path %>' method='post'>
+        <input type='hidden' name='authenticity_token' value='<%= form_authenticity_token %>'>
+        <div>
+        First Name: <input type='text' name='user[first_name]'>
+        </div>
+        <div>
+        Last Name: <input type='text' name='user[last_name]'>
+        </div>
+        <div>
+        Favorite Language: <input type='text' name='user[favorite_language]'>
+        </div>
+        <input type='submit' value='Submit'>
+    </form>
+    <form action='/posts' method='get'>
+        <input type='hidden' name='authenticity_token' value='<%= form_authenticity_token %>'>
+        <input type='submit' value='All Posts'>
+    </form>
+</div>

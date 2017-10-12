@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Recipe Details</title>
+</head>
+<body>
+	<h2>Edit <%= @recipe.name %></h2>
+
+	<form action="/recipes/<%=@recipe.id%>/update" method="post">
+	<label for="name">Name:</label>
+	<input type="text" name="name" value="<%= @recipe.name %>">
+	<br>
+	<br>
+	<label for="desc">Description:</label>
+	<input type="text" name="desc" value="<%= @recipe.desc %>">
+	<input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+	<br>
+	<br>
+	<label for="mealtime">Meal Time:</label>
+	<select name="mealtime">
+		<option value="breakfast">Breakfast</option>
+		<option value="lunch">Lunch</option>
+		<option value="dinner">Dinner</option>
+		<option value="snack">Snack</option>
+		<option value="desert">Desert</option>
+	</select>
+	<br>
+	<br>
+	<label for="preptime">Prep Time (Mins):</label>
+	<input type="integer" name="preptime" value="<%= @recipe.preptime %>">
+	<br>
+	<br>
+	<label for="cooktime">Cook Time (Mins):</label>
+	<input type="text" name="cooktime" value="<%= @recipe.cooktime %>">
+	<br>
+	<br>
+	<label for="directions">Directions:</label>
+	<input type="text" name="directions" value="<%= @recipe.directions %>">
+	<br>
+	<br>
+	<label for="notes">Notes:</label>
+	<input type="text" name="notes" value="<%= @recipe.notes %>">
+	<br>
+	<br>
+	<label for="source">Source:</label>
+	<input type="text" name="source" value="<%= @recipe.source %>">
+	<br>
+	<br>
+	<label for="cuisine">Cuisine:</label>
+	<select name="cuisine">
+		<option value="none"></option>
+		<option value="general">General</option>
+		<option value="italian">Italian</option>
+		<option value="german">German</option>
+		<option value="greek">Greek/Mediterranean</option>
+		<option value="chinese">Chinese</option>
+		<option value="se_asian">South East Asian</option>
+		<option value="central_american">Central American</option>
+	</select>
+	<br>
+	<br>
+	<label for="holiday">Holiday:</label>
+	<select name="holiday">
+		<option value="none"></option>
+		<option value="easter">Easter</option>
+		<option value="christmas">Christmas</option>
+		<option value="thanksgiving">Thanksgiving</option>
+		<option value="birthday">Birthday</option>
+	</select>
+	<br>
+	<br>
+	<input type="hidden" name="_method" value="patch">
+	<input type="submit" value="Submit">
+	</form>
+
+
+	<p><a href="/ingredients/new">Add Ingredients</a></p>
+
+</body>
+</html>
+

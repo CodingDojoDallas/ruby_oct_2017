@@ -1,0 +1,81 @@
+/* line 4, /vagrant/not_git/ninjagold/app/assets/stylesheets/games.scss */
+* {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
+
+/* line 10, /vagrant/not_git/ninjagold/app/assets/stylesheets/games.scss */
+#buildings {
+  align-items: center;
+  justify-content: center;
+}
+/* line 13, /vagrant/not_git/ninjagold/app/assets/stylesheets/games.scss */
+#buildings div {
+  margin: 50px 10px;
+  display: inline-block;
+  vertical-align: top;
+  width: 20%;
+  border: 1px solid black;
+  text-align: center;
+  padding: 50px 0px;
+  color: white;
+}
+/* line 24, /vagrant/not_git/ninjagold/app/assets/stylesheets/games.scss */
+#buildings #farm {
+  background: linear-gradient(to bottom, limegreen, #784212);
+}
+/* line 27, /vagrant/not_git/ninjagold/app/assets/stylesheets/games.scss */
+#buildings #cave {
+  background: linear-gradient(to bottom, black 50%, #784212);
+}
+/* line 30, /vagrant/not_git/ninjagold/app/assets/stylesheets/games.scss */
+#buildings #casino {
+  background: linear-gradient(to bottom, yellow, blue, yellow);
+}
+/* line 33, /vagrant/not_git/ninjagold/app/assets/stylesheets/games.scss */
+#buildings #house {
+  background: url(/bricks.jpg);
+}
+
+/* line 38, /vagrant/not_git/ninjagold/app/assets/stylesheets/games.scss */
+#activities {
+  width: 90%;
+  height: 200px;
+  overflow: auto;
+  border: 1px solid black;
+  padding-top: 5px;
+  padding-left: 5px;
+}
+/* line 45, /vagrant/not_git/ninjagold/app/assets/stylesheets/games.scss */
+#activities li {
+  list-style: none;
+}
+/* line 48, /vagrant/not_git/ninjagold/app/assets/stylesheets/games.scss */
+#activities .win {
+  color: green;
+}
+/* line 51, /vagrant/not_git/ninjagold/app/assets/stylesheets/games.scss */
+#activities .loss {
+  color: red;
+}
+/* line 54, /vagrant/not_git/ninjagold/app/assets/stylesheets/games.scss */
+#activities .tie {
+  color: black;
+}
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+
+
+ */
+

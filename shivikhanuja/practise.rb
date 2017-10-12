@@ -1,24 +1,35 @@
-def test
-    puts "You are in method"
-    yield
-    puts "You are again back to method"
+# #Class
+# class Vehicle
+#     attr_accessor :engine
+
+#     def initialize engine, weight, capacity
+#         @engine = engine
+#         @weight = weight
+#         @capacity = capacity
+#         @mileage = mileage
+#     end
+#     def turnOn
+#        "Wruum" 
+#     end    
+#     def to_s
+#         "Engine : #{@engine},Weight: #{@weight}, Capacity: #{@capacity}"
+#     end        
+# end
+
+# #Object of Vehicle
+#         #it is a memory address
+
+def test 
+    puts "You are in the method" 
     yield 
-end 
-test {puts "You are in the block"}
+    puts "You are again back to the method" 
+    yield 
+  end 
+  test { puts "You are in the block" }
 
-def test
-    yield(5)
-    puts "You are in the method test"
-    yield(100)
-end
-test { |i| puts "you are in block #{i}"}
-
-def square(num)
-    puts"num is #{num}"
-    puts "yield(num) has a value of #{yield(num)}"
-end
-
-square (5) do |i|
-    i=in
-end
-
+  def test 
+    yield 5 
+    puts "You are in the method test" 
+    yield 100 
+  end 
+  test { |i| puts "You are in the block #{i}" }

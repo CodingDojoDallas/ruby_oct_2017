@@ -1,0 +1,35 @@
+<h1>Index page Works!</h1>
+<div>
+    <form action='<%= users_create_path %>' method='post'>
+        <input type='hidden' name='authenticity_token' value='<%= form_authenticity_token %>'>
+        <div>
+            <label>Your Name:</label>
+            <input type='text' name='user[name]'>
+        </div>
+        <div>
+            <label>Dojo Location:</label>
+            <select name='user[location]'>
+                <option disabled selected value>Select</option>
+                <option value="San Jose">San Jose</option>
+                <option value="Seattle">Seattle</option>
+                <option value="Dallas">Dallas</option>
+                <option value="Mountain View">Mountain View</option>
+            </select>
+        </div>
+        <div>
+            <label>Favorite Language:</label>
+            <select name='user[language]'>
+                <option disabled selected value>Select</option>
+                <option value="Ruby">Ruby</option>
+                <option value="JavaScript">JavaScript</option>
+                <option value="Python">Python</option>
+                <option value=".Net">.Net</option>
+            </select>
+        </div>
+        <div>
+            <label>Comment:</label>
+            <textarea name='user[comment]' cols='30'  rows='3'></textarea>
+        </div>
+        <input type='submit' value='Submit'>
+    </form>
+</div>

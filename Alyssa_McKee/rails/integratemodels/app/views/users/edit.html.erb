@@ -1,0 +1,7 @@
+<h1>Users#edit</h1>
+<form action="/users/<%=@id%>" method="POST">
+<input name="authenticity_token" value="<%=form_authenticity_token %>" type="hidden"/>
+<label for="name">Name</label>
+<input type="text" name="name" id="name"/>
+
+</form>

@@ -13,9 +13,9 @@ class Deck
       @cards.pop(number)
   end
 
-  def reset
+  def reset #♥♠♣♦♤♧♡♢
       @cards = [ ]
-      ["D", "H", "C", "S"].each do |suit|
+      ["◇", "♡", "♣", "♠"].each do |suit|
         ["A", 2,3,4,5,6,7,8,9,10,"J","Q","K"].each do |val|
           @cards << [suit, val]
         end
@@ -53,7 +53,16 @@ end
 # -------------------GAME START------------------------
 #@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
 
-def add_hand hand 	#helper method, adds up a hand's value
+#helper function, prints an array of cards (hand) so it looks pretty in the terminal
+def pretty_print hand 
+	hand.each do |card|
+		print "[#{card.join}] "
+	end
+	print "#{add_hand hand}\n"
+end
+
+#helper method, adds up a hand's value
+def add_hand hand 	
 	sum = 0
 	num_aces = 0
 	hand.each do |suit, value| 
@@ -81,49 +90,60 @@ end
 
 system "clear" or system "cls" #tries to clear the terminal 2 different ways
 
+#create and shuffle the deck
 deck = Deck.new
 deck.shuffle
 
+#make the player and dealer
 print "enter a name: "
-name = gets.chomp
+name = gets.chomp		#waits for user input, stores it in name, chomp cuts off trailing whitespace
 player1 = Player.new(name)
-p "your name is #{player1.name}"
+puts "Welcome to the table, #{player1.name}"
 dealer = Player.new("Dealer")
 
-deck.shuffle
+#dealer and player draw 2 cards from the deck. print the players hand
 player1.draw deck, 2
 dealer.draw deck, 2
-p player1.hand
+pretty_print player1.hand
+
+#wait for user input
 print "hit or stand? "
-move = gets.chomp 	#waits for user input, stores it in move, chomp cuts off trailing whitespace
+move = gets.chomp 	
+
+#while the user enters "hit" draw a card, print the new hand, wait for input
 while move == "hit" do
-	player1.draw deck, 1 if move == "hit"
-	p player1.hand
+	player1.draw deck, 1 if move == "hit" #note add a check to see if they are now over 21 at this point?...
+	pretty_print player1.hand
+
 	print "hit or stand? "
 	move = gets.chomp
 end
+
+#add up the resulting hands
 player_sum = add_hand player1.hand
 dealer_sum = add_hand dealer.hand
 
+#dealer draws until over 17
 while dealer_sum <17 do
 	dealer.draw deck, 1
 	dealer_sum = add_hand dealer.hand
 end
 sleep(0.5)	#pauses the terminal for 0.5 seconds
 
-
 print "Dealers Hand: "
-p dealer.hand
+pretty_print dealer.hand
 sleep(0.5)
 
 print "Player's Hand: "
-p player1.hand
-sleep(0.5)
+pretty_print player1.hand
 
-puts "your total: #{player_sum}"
-sleep(0.5)
-puts "dealer total: #{dealer_sum}"
+# commented out because the totals are now printed with "pretty_print"
+# sleep(0.5)
+# puts "your total: #{player_sum}"
+# sleep(0.5)
+# puts "dealer total: #{dealer_sum}"
 
+#win lose logic
 sleep(1)
 if player_sum > 21
 	puts "Over 21! You lose!"
@@ -138,6 +158,7 @@ else
 end
 sleep(1)
 
+#ask to play again?  
   
   #add the values, of player1
   #add the values of the dealer

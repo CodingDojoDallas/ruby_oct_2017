@@ -1,0 +1,16 @@
+<p>index 3</p>
+<h1>All Posts</h1>
+<table>
+    <tr>
+        <th>Title---</th>
+        <th>Comment---</th>
+        <th>Author---</th>
+    <tr>
+    <% @posts.each do |post| %>
+    <tr>
+        <td><%= post.title %></td>
+        <td><%= post.comment %></td>
+        <td><%= post.author %></td>
+    </tr>
+    <% end %>
+</table>

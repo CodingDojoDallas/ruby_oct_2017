@@ -1,0 +1,8 @@
+<h1>Edit your name please: </h1>
+<form action="<%= users_patch_path %>" method='post'>
+  <input type="hidden" name = '_method' value = 'patch'>
+  <input type="hidden" name = 'id'>
+  <input type="hidden" name='authenticity_token' value="<%= form_authenticity_token %>">
+  <input type="text" name="user[name]" value='<%= @name %>'>
+  <input type="submit" value="Edit User">
+</form>

@@ -1,0 +1,26 @@
+<h2>Branch name: <%= @one.branch %></h2>
+<h3>Street: <%= @one.street %></h3>
+<h3>City: <%= @one.city %></h3>
+<h3>State: <%= @one.state %></h3>
+<p><a href='<%= edit_one_path(@one.id) %>'>Edit</a></p>
+<p><a href='<%= delete_one_path(@one.id) %>' data-method='delete'>Delete</a></p>
+<p><a href='<%= new_student_path(@one.id) %>'>Add Student</a></p>
+<p><a href='<%= dojo_show_path %>'>Go Back</a></p>
+<h2>Students at <%= @one.branch %> branch</h2>
+<table>
+    <tr>
+        <th>Student First Name:</th>
+        <th>Student Last Name:</th>
+        <th>Student Email:</th>
+        <th></th>
+    </tr>
+    <% @students.each do |student| %>
+    <tr>
+        <td><%= student.first_name %></td>
+        <td><%= student.last_name %></td>
+        <td><%= student.email %></td>  
+        <td><a href='<%= edit_student_path student.id %>'>Edit</a></td>  
+        <td><a href='<%= delete_student_path(student.id) %>' data-method='delete'>Delete</a></td>   
+    </tr>
+    <% end %>
+</table>

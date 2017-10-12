@@ -1,0 +1,26 @@
+
+<h1>Make new Dojo</h1>
+<div>
+    <form action='<%= dojo_new_path %>' method='post'>
+        <input type='hidden' name='authenticity_token' value='<%= form_authenticity_token %>'>
+        <div>
+            <label>Branch:</label>
+            <input type='text' name='dojo[branch]'>
+        </div>
+        <div>
+            <label>Street:</label>
+            <input type='text' name='dojo[street]'>
+        </div>
+        <div>
+            <label>City:</label>
+            <input type='text' name='dojo[city]'>
+        </div>
+        <div>
+            <label>State:</label>
+            <input type='text' name='dojo[state]'>
+        </div>
+        <input type='submit' value='Submit'>
+    </form>
+</div>
+<h4 style='color:red'><%= @error %></h4>
+<a href='/'>Go Back</a>

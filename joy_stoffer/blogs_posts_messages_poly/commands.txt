@@ -1,0 +1,11 @@
+We're going to add another model (Comment) to our Blogs/Posts/Messages assignment
+  rails g model Comment commentable:references{polymorphic}
+
+allow the user to leave a comment for either a user, blog, post or a message
+  has_many :comments, as: :commentable (you put this line in each preexisting table in order for all of them to connect to the new one)
+
+Test using the console and make sure it allows you to add, update, delete comments for a user, blog, post, and a message.
+  ADD 1-Comment.create(content:"this is the story of a girl...") (this worked, but had to go back in and update the commentable columns)
+    UPDATE- Comment.first.update(commentable_id:1, commentable_type:"Blog")
+  ADD 2-Comment.create(commentable:User.first, content:"this is the story of a girl") (this is the correct way to create a commentable row)
+  DELETE - Comment.third.delete

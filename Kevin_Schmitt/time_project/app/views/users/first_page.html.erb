@@ -1,0 +1,12 @@
+<h1>Time Display works!</h1>
+
+
+<h6><%= Time.now.strftime("%m/%d/%Y") %></h6>
+<h6><%= Time.now.in_time_zone(-5).strftime("%I:%M %p") %></h6>
+
+<%# <p>Wrong Month: <%= Date.parse(Time.now.strftime("%m/%d/%Y")).strftime('%B') %></p> %>
+
+
+
+<h1><%= Time.now.strftime("%b %d, %Y") %></h1>
+<h1><%= Time.now.strftime("%I:%M %p") %></h1>

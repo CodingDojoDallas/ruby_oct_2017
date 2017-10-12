@@ -1,0 +1,8 @@
+command to create polymorphic table
+
+ rails g model Comment content
+:string commentable:references{polymorphic}
+
+
+added to each file
+has_many :comments, as: :commentable

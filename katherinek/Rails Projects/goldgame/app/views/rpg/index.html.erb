@@ -1,0 +1,50 @@
+<h2>Ninja Gold - Come Try Your Luck</h2>
+
+<p>Your Gold: <%= @goldcount %></p>
+
+
+<h3>Cave</h3>
+<p>(earns 5-10 golds)</p>
+<form action="/rpg/getgold" method="post">
+<input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">	
+<input type="hidden" name="place" value="cave">
+<button type="submit">Find Gold!</button>
+</form>
+
+<h3>Farm</h3>
+<p>(earns 10-20 golds)</p>
+<form action="/rpg/getgold" method="post">
+<input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">	
+<input type="hidden" name="place" value="farm">
+<button type="submit">Find Gold!</button>
+</form>
+
+<h3>House</h3>
+<p>(earns 25-50 golds)</p>
+<form action="/rpg/getgold" method="post">
+<input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">	
+<input type="hidden" name="place" value="house">
+<button type="submit">Find Gold!</button>
+</form>
+
+<h3>Casino</h3>
+<p>(earns/loses 0-100 golds)</p>
+<form action="/rpg/getgold" method="post">
+<input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">	
+<input type="hidden" name="place" value="casino">
+<button type="submit">Find Gold!</button>
+</form>
+
+
+<% if @results %>
+<% @results.reverse.each do |this| %>
+	<% if this.include? 'lost' %>
+	<p class="red"><%= this %></p>
+	<% else %>
+	<p class="green"><%= this %></p>
+	<% end %>
+<% end %>
+<% end %>
+
+<br>
+<a href="/rpg/clear">Clear</a>

@@ -1,0 +1,38 @@
+<% if flash[:notice] %>	
+<ul>
+	<% flash[:notice].each do |value|%>
+		<li><%= value %></li>
+	<% end %>
+</ul>
+<% end %>
+
+<form action="/create" method="POST">
+	<input name="authenticity_token" value="<%=form_authenticity_token %>" type="hidden"/>
+	<div>
+		<label for="survey[name]">Your Name</label>
+		<input type="text" name="survey[name]" id="survey[name]"/>
+	</div>
+	<div>
+		<label for="survey[location]">Dojo Location:</label>
+		<select name="survey[location]" id="survey[location]">
+			<option>Mountain View</option>
+			<option>Dallas TX</option>
+			<option>Seattle WA</option>
+			<option>Tulsa OK</option>
+		</select>
+	</div>
+	<div>
+		<label for="survey[language]">Favorite Language</label>
+		<select name="survey[language]" id="survey[language]">
+			<option>Ruby on Rails</option>
+			<option>Python</option>
+			<option>Java</option>
+			<option>JavaScript</option>
+		</select>
+	</div>
+	<div>
+		<label for="Comment">Comment (optional)</label>
+		<textarea name="survey[comment]" id="survey[comment]" cols="30" rows="10"></textarea>
+	</div>
+	<button type="submit">Submit</button>
+</form>

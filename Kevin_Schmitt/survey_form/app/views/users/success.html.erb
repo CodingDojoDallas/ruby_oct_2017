@@ -1,0 +1,17 @@
+<h1>Success page Works!</h1>
+<div class='header'>Thanks for submitting this form! You have submitted this form <%= @times %> time(s) now</div>
+<h2>Submitted Information</h2>
+<h4>Name: <%= @user.name %></h4>
+<h4>Dojo Location: <%= @user.location %></h4>
+<h4>Favorite Language: <%= @user.language %></h4>
+<h4>Comment: <%= @user.comment %></h4>
+<hr>
+<hr>
+<div>
+    <% @users.each do |oneuser| %>
+        <h5>Name: <%= oneuser.name %> -- Language: <%= oneuser.language %></h5>
+    <% end %>
+</div>
+<form action='/'>
+<input type='submit' value='Go Back'>
+</form>

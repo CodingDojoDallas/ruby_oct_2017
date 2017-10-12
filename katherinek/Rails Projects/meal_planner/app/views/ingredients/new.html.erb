@@ -1,0 +1,246 @@
+	<h2>Recipe for <%= @recipe.name %></h2>
+	<p>Description: <%= @recipe.desc %></p>
+	<p>Prep Time: <%= @recipe.preptime %></p>
+	<p>Cook Time: <%= @recipe.cooktime %></p>
+	<p>Directions: <%= @recipe.directions %></p>
+	<p>Notes: <%= @recipe.notes %></p>
+	<p>Source: <%= @recipe.source %></p>
+	<p>Meal Time: <%= @recipe.mealtime %></p>
+	<p>Cuisine: <%= @recipe.cuisine %></p>
+	<p>Holiday: <%= @recipe.holiday %></p>
+	
+
+	<h3>Ingredients:</h3>
+	
+	<ul>
+	<% if @added_ingredients %>	
+	<% @added_ingredients.each do |ingredient| %>
+		<li><%= ingredient.name %></li>
+	<% end %>
+	<% end %>
+	</ul>
+	
+	<h3>Add Ingredients:</h3>
+
+		<% if @proteins != nil %>
+		<table>
+			<thead>
+				<tr>
+					<th>Name</th>
+					<th>Unit</th>
+					<th>Quantity</th>
+					<th>Option</th>
+				</tr>
+			</thead>
+			<tbody>
+				<% @proteins.each do |ingredient| %>
+				<form action="/ingredient_list/add" method="post">
+				<input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+				<input type="hidden" name="recipe" value="<%= @recipe.id %>">
+				<input type="hidden" name="ingredient" value="<%= ingredient.id %>">
+				<tr>
+					<td><%= ingredient.name %></td>
+					<td><%= ingredient.qty %> <%= ingredient.unit %></td>
+					<td>
+						<select name="amount">
+							<option value="0">0</option>
+							<option value="1">1</option>
+							<option value="2">2</option>
+							<option value="3">3</option>
+							<option value="4">4</option>
+							<option value="5">5</option>
+						</select>
+					</td>
+					<td><input type="submit" name="submit" value="Add"></td>
+				</tr>		
+				</form>
+				<% end %>
+			</tbody>	
+		</table>
+		<% end %>
+
+		<% if @vegetables != nil %>	
+		<table>
+			<thead>
+				<tr>
+					<th>Name</th>
+					<th>Unit</th>
+					<th>Quantity</th>
+					<th>Option</th>
+				</tr>
+			</thead>
+			<tbody>
+
+				<% @vegetables.each do |ingredient| %>
+				<form action="/ingredient_list/add" method="post">
+				<input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+				<input type="hidden" name="recipe" value="<%= @recipe.id %>">
+				<input type="hidden" name="ingredient" value="<%= ingredient.id %>">
+				<tr>
+					<td><%= ingredient.name %></td>
+					<td><%= ingredient.qty %> <%= ingredient.unit %></td>
+					<td>
+						<select name="amount">
+							<option value="0">0</option>
+							<option value="1">1</option>
+							<option value="2">2</option>
+							<option value="3">3</option>
+							<option value="4">4</option>
+							<option value="5">5</option>
+						</select>
+					</td>
+					<td><input type="submit" name="submit" value="Add"></td>
+				</tr>		
+				</form>
+				<% end %>
+			</tbody>	
+		</table>
+		<% end %>
+
+		<% if @grains != nil %>
+		<table>
+			<thead>
+				<tr>
+					<th>Name</th>
+					<th>Unit</th>
+					<th>Quantity</th>
+					<th>Option</th>
+				</tr>
+			</thead>
+			<tbody>
+				<% @grains.each do |ingredient| %>
+				<form action="/ingredient_list/add" method="post">
+				<input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+				<input type="hidden" name="recipe" value="<%= @recipe.id %>">
+				<input type="hidden" name="ingredient" value="<%= ingredient.id %>">
+				<tr>
+					<td><%= ingredient.name %></td>
+					<td><%= ingredient.qty %> <%= ingredient.unit %></td>
+					<td>
+						<select name="amount">
+							<option value="0">0</option>
+							<option value="1">1</option>
+							<option value="2">2</option>
+							<option value="3">3</option>
+							<option value="4">4</option>
+							<option value="5">5</option>
+						</select>
+					</td>
+					<td><input type="submit" name="submit" value="Add"></td>
+				</tr>		
+				</form>
+				<% end %>
+			</tbody>	
+		</table>
+		<% end %>
+
+		<% if @starches != nil %>
+		<table>
+			<thead>
+				<tr>
+					<th>Name</th>
+					<th>Unit</th>
+					<th>Quantity</th>
+					<th>Option</th>
+				</tr>
+			</thead>
+			<tbody>
+				<% @starches.each do |ingredient| %>
+				<form action="/ingredient_list/add" method="post">
+				<input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+				<input type="hidden" name="recipe" value="<%= @recipe.id %>">
+				<input type="hidden" name="ingredient" value="<%= ingredient.id %>">
+				<tr>
+					<td><%= ingredient.name %></td>
+					<td><%= ingredient.qty %> <%= ingredient.unit %></td>
+					<td>
+						<select name="amount">
+							<option value="0">0</option>
+							<option value="1">1</option>
+							<option value="2">2</option>
+							<option value="3">3</option>
+							<option value="4">4</option>
+							<option value="5">5</option>
+						</select>
+					</td>
+					<td><input type="submit" name="submit" value="Add"></td>
+				</tr>		
+				</form>
+				<% end %>
+			</tbody>	
+		</table>
+		<% end %>
+
+		<% if @fruits != nil %>
+		<table>
+			<thead>
+				<tr>
+					<th>Name</th>
+					<th>Unit</th>
+					<th>Quantity</th>
+					<th>Option</th>
+				</tr>
+			</thead>
+			<tbody>
+				<% @fruits.each do |ingredient| %>
+				<form action="/ingredient_list/add" method="post">
+				<input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+				<input type="hidden" name="recipe" value="<%= @recipe.id %>">
+				<input type="hidden" name="ingredient" value="<%= ingredient.id %>">
+				<tr>
+					<td><%= ingredient.name %></td>
+					<td><%= ingredient.qty %> <%= ingredient.unit %></td>
+					<td>
+						<select name="amount">
+							<option value="0">0</option>
+							<option value="1">1</option>
+							<option value="2">2</option>
+							<option value="3">3</option>
+							<option value="4">4</option>
+							<option value="5">5</option>
+						</select>
+					</td>
+					<td><input type="submit" name="submit" value="Add"></td>
+				</tr>		
+				</form>
+				<% end %>
+			</tbody>	
+		</table>
+		<% end %>
+
+		<% if @sauces != nil  %>
+		<table>
+			<thead>
+				<tr>
+					<th>Name</th>
+					<th>Unit</th>
+					<th>Quantity</th>
+					<th>Option</th>
+				</tr>
+			</thead>
+			<tbody>
+				<% @sauces.each do |ingredient| %>
+				<form action="/ingredient_list/add" method="post">
+				<input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+				<input type="hidden" name="recipe" value="<%= @recipe.id %>">
+				<input type="hidden" name="ingredient" value="<%= ingredient.id %>">
+				<tr>
+					<td><%= ingredient.name %></td>
+					<td><%= ingredient.qty %> <%= ingredient.unit %></td>
+					<td>
+						<select name="amount">
+							<option value="0">0</option>
+							<option value="1">1</option>
+							<option value="2">2</option>
+							<option value="3">3</option>
+							<option value="4">4</option>
+							<option value="5">5</option>
+						</select>
+					</td>
+					<td><input type="submit" name="submit" value="Add"></td>
+				</tr>		
+				</form>
+				<% end %>
+			</tbody>	
+		</table>
+		<% end %>
