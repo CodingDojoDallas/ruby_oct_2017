@@ -1,0 +1,577 @@
+vagrant@vagrant-ubuntu-trusty-64:/vagrant/ruby_oct_2017/Alyssa_McKee/TTD/rspeconrai
+ls/WALLS$ rspec spec
+
+An error occurred while loading ./spec/models/comment_spec.rb.
+Failure/Error: require File.expand_path('../../config/environment', __FILE__)
+
+ArgumentError:
+  Missing :controller key on routes definition, please check your routes.
+# /home/vagrant/.rvm/gems/ruby-2.3.1/gems/actionpack-4.2.7/lib/action_dispatch/routi
+ng/mapper.rb:275:in `check_part'
+# /home/vagrant/.rvm/gems/ruby-2.3.1/gems/actionpack-4.2.7/lib/action_dispatch/routi
+ng/mapper.rb:255:in `check_controller_and_action'
+# /home/vagrant/.rvm/gems/ruby-2.3.1/gems/actionpack-4.2.7/lib/action_dispatch/routi
+ng/mapper.rb:178:in `normalize_options!'
+# /home/vagrant/.rvm/gems/ruby-2.3.1/gems/actionpack-4.2.7/lib/action_dispatch/routi
+ng/mapper.rb:100:in `initialize'
+# /home/vagrant/.rvm/gems/ruby-2.3.1/gems/actionpack-4.2.7/lib/action_dispatch/routi
+ng/mapper.rb:78:in `new'
+# /home/vagrant/.rvm/gems/ruby-2.3.1/gems/actionpack-4.2.7/lib/action_dispatch/routi
+ng/mapper.rb:78:in `build'
+# /home/vagrant/.rvm/gems/ruby-2.3.1/gems/actionpack-4.2.7/lib/action_dispatch/routi
+ng/mapper.rb:1560:in `add_route'
+# /home/vagrant/.rvm/gems/ruby-2.3.1/gems/actionpack-4.2.7/lib/action_dispatch/routi
+ng/mapper.rb:1537:in `decomposed_match'
+# /home/vagrant/.rvm/gems/ruby-2.3.1/gems/actionpack-4.2.7/lib/action_dispatch/routi
+ng/mapper.rb:1518:in `block in match'
+# /home/vagrant/.rvm/gems/ruby-2.3.1/gems/actionpack-4.2.7/lib/action_dispatch/routi
+ng/mapper.rb:1508:in `each'
+# /home/vagrant/.rvm/gems/ruby-2.3.1/gems/actionpack-4.2.7/lib/action_dispatch/routi
+ng/mapper.rb:1508:in `match'
+# /home/vagrant/.rvm/gems/ruby-2.3.1/gems/actionpack-4.2.7/lib/action_dispatch/routi
+ng/mapper.rb:690:in `map_method'
+# /home/vagrant/.rvm/gems/ruby-2.3.1/gems/actionpack-4.2.7/lib/action_dispatch/routi
+ng/mapper.rb:651:in `get'
+# ./config/routes.rb:3:in `block in <top (required)>'
+# /home/vagrant/.rvm/gems/ruby-2.3.1/gems/actionpack-4.2.7/lib/action_dispatch/routi
+ng/route_set.rb:432:in `instance_exec'
+# /home/vagrant/.rvm/gems/ruby-2.3.1/gems/actionpack-4.2.7/lib/action_dispatch/routi
+ng/route_set.rb:432:in `eval_block'
+# /home/vagrant/.rvm/gems/ruby-2.3.1/gems/actionpack-4.2.7/lib/action_dispatch/routi
+ng/route_set.rb:410:in `draw'
+# ./config/routes.rb:1:in `<top (required)>'
+# /home/vagrant/.rvm/gems/ruby-2.3.1/gems/activesupport-4.2.7/lib/active_support/dep
+endencies.rb:268:in `load'
+# /home/vagrant/.rvm/gems/ruby-2.3.1/gems/activesupport-4.2.7/lib/active_support/dep
+endencies.rb:268:in `block in load'
+# /home/vagrant/.rvm/gems/ruby-2.3.1/gems/activesupport-4.2.7/lib/active_support/dep
+endencies.rb:240:in `load_dependency'
+# /home/vagrant/.rvm/gems/ruby-2.3.1/gems/activesupport-4.2.7/lib/active_support/dep
+endencies.rb:268:in `load'
+# /home/vagrant/.rvm/gems/ruby-2.3.1/gems/railties-4.2.7/lib/rails/application/route
+s_reloader.rb:40:in `block in load_paths'
+# /home/vagrant/.rvm/gems/ruby-2.3.1/gems/railties-4.2.7/lib/rails/application/route
+s_reloader.rb:40:in `each'
+# /home/vagrant/.rvm/gems/ruby-2.3.1/gems/railties-4.2.7/lib/rails/application/route
+s_reloader.rb:40:in `load_paths'
+# /home/vagrant/.rvm/gems/ruby-2.3.1/gems/railties-4.2.7/lib/rails/application/route
+s_reloader.rb:16:in `reload!'
+# /home/vagrant/.rvm/gems/ruby-2.3.1/gems/railties-4.2.7/lib/rails/application/route
+s_reloader.rb:26:in `block in updater'
+# /home/vagrant/.rvm/gems/ruby-2.3.1/gems/activesupport-4.2.7/lib/active_support/fil
+e_update_checker.rb:75:in `execute'
+# /home/vagrant/.rvm/gems/ruby-2.3.1/gems/railties-4.2.7/lib/rails/application/route
+s_reloader.rb:27:in `updater'
+# /home/vagrant/.rvm/gems/ruby-2.3.1/gems/railties-4.2.7/lib/rails/application/route
+s_reloader.rb:7:in `execute_if_updated'
+# /home/vagrant/.rvm/gems/ruby-2.3.1/gems/railties-4.2.7/lib/rails/application/finis
+her.rb:69:in `block in <module:Finisher>'
+# /home/vagrant/.rvm/gems/ruby-2.3.1/gems/railties-4.2.7/lib/rails/initializable.rb:
+30:in `instance_exec'
+# /home/vagrant/.rvm/gems/ruby-2.3.1/gems/railties-4.2.7/lib/rails/initializable.rb:
+30:in `run'
+# /home/vagrant/.rvm/gems/ruby-2.3.1/gems/railties-4.2.7/lib/rails/initializable.rb:
+55:in `block in run_initializers'
+# /home/vagrant/.rvm/gems/ruby-2.3.1/gems/railties-4.2.7/lib/rails/initializable.rb:
+54:in `run_initializers'
+# /home/vagrant/.rvm/gems/ruby-2.3.1/gems/railties-4.2.7/lib/rails/application.rb:35
+2:in `initialize!'
+# ./config/environment.rb:5:in `<top (required)>'
+# ./spec/rails_helper.rb:4:in `require'
+# ./spec/rails_helper.rb:4:in `<top (required)>'
+# ./spec/models/comment_spec.rb:1:in `require'
+# ./spec/models/comment_spec.rb:1:in `<top (required)>'
+
+An error occurred while loading ./spec/models/message_spec.rb.
+Failure/Error: require File.expand_path('../../config/environment', __FILE__)
+
+RuntimeError:
+  can't modify frozen Array
+# /home/vagrant/.rvm/gems/ruby-2.3.1/gems/railties-4.2.7/lib/rails/engine.rb:577:in
+`unshift'
+# /home/vagrant/.rvm/gems/ruby-2.3.1/gems/railties-4.2.7/lib/rails/engine.rb:577:in
+`block in <class:Engine>'
+# /home/vagrant/.rvm/gems/ruby-2.3.1/gems/railties-4.2.7/lib/rails/initializable.rb:
+30:in `instance_exec'
+# /home/vagrant/.rvm/gems/ruby-2.3.1/gems/railties-4.2.7/lib/rails/initializable.rb:
+30:in `run'
+# /home/vagrant/.rvm/gems/ruby-2.3.1/gems/railties-4.2.7/lib/rails/initializable.rb:
+55:in `block in run_initializers'
+# /home/vagrant/.rvm/gems/ruby-2.3.1/gems/railties-4.2.7/lib/rails/initializable.rb:
+44:in `each'
+# /home/vagrant/.rvm/gems/ruby-2.3.1/gems/railties-4.2.7/lib/rails/initializable.rb:
+44:in `tsort_each_child'
+# /home/vagrant/.rvm/gems/ruby-2.3.1/gems/railties-4.2.7/lib/rails/initializable.rb:
+44:in `each'
+# /home/vagrant/.rvm/gems/ruby-2.3.1/gems/railties-4.2.7/lib/rails/initializable.rb:
+44:in `tsort_each_child'
+# /home/vagrant/.rvm/gems/ruby-2.3.1/gems/railties-4.2.7/lib/rails/initializable.rb:
+44:in `each'
+# /home/vagrant/.rvm/gems/ruby-2.3.1/gems/railties-4.2.7/lib/rails/initializable.rb:
+44:in `tsort_each_child'
+# /home/vagrant/.rvm/gems/ruby-2.3.1/gems/railties-4.2.7/lib/rails/initializable.rb:
+44:in `each'
+# /home/vagrant/.rvm/gems/ruby-2.3.1/gems/railties-4.2.7/lib/rails/initializable.rb:
+44:in `tsort_each_child'
+# /home/vagrant/.rvm/gems/ruby-2.3.1/gems/railties-4.2.7/lib/rails/initializable.rb:
+54:in `run_initializers'
+# /home/vagrant/.rvm/gems/ruby-2.3.1/gems/railties-4.2.7/lib/rails/application.rb:35
+2:in `initialize!'
+# ./config/environment.rb:5:in `<top (required)>'
+# /home/vagrant/.rvm/gems/ruby-2.3.1/gems/activesupport-4.2.7/lib/active_support/dep
+endencies.rb:274:in `require'
+# /home/vagrant/.rvm/gems/ruby-2.3.1/gems/activesupport-4.2.7/lib/active_support/dep
+endencies.rb:274:in `block in require'
+# /home/vagrant/.rvm/gems/ruby-2.3.1/gems/activesupport-4.2.7/lib/active_support/dep
+endencies.rb:240:in `load_dependency'
+# /home/vagrant/.rvm/gems/ruby-2.3.1/gems/activesupport-4.2.7/lib/active_support/dep
+endencies.rb:274:in `require'
+# ./spec/rails_helper.rb:4:in `<top (required)>'
+# /home/vagrant/.rvm/gems/ruby-2.3.1/gems/activesupport-4.2.7/lib/active_support/dep
+endencies.rb:274:in `require'
+# /home/vagrant/.rvm/gems/ruby-2.3.1/gems/activesupport-4.2.7/lib/active_support/dep
+endencies.rb:274:in `block in require'
+# /home/vagrant/.rvm/gems/ruby-2.3.1/gems/activesupport-4.2.7/lib/active_support/dep
+endencies.rb:240:in `load_dependency'
+# /home/vagrant/.rvm/gems/ruby-2.3.1/gems/activesupport-4.2.7/lib/active_support/dep
+endencies.rb:274:in `require'
+# ./spec/models/message_spec.rb:1:in `<top (required)>'
+# /home/vagrant/.rvm/gems/ruby-2.3.1/gems/activesupport-4.2.7/lib/active_support/dep
+endencies.rb:268:in `load'
+# /home/vagrant/.rvm/gems/ruby-2.3.1/gems/activesupport-4.2.7/lib/active_support/dep
+endencies.rb:268:in `block in load'
+# /home/vagrant/.rvm/gems/ruby-2.3.1/gems/activesupport-4.2.7/lib/active_support/dep
+endencies.rb:240:in `load_dependency'
+# /home/vagrant/.rvm/gems/ruby-2.3.1/gems/activesupport-4.2.7/lib/active_support/dep
+endencies.rb:268:in `load'
+
+An error occurred while loading ./spec/models/user_spec.rb.
+Failure/Error: require File.expand_path('../../config/environment', __FILE__)
+
+RuntimeError:
+  can't modify frozen Array
+# /home/vagrant/.rvm/gems/ruby-2.3.1/gems/railties-4.2.7/lib/rails/engine.rb:577:in
+`unshift'
+# /home/vagrant/.rvm/gems/ruby-2.3.1/gems/railties-4.2.7/lib/rails/engine.rb:577:in
+`block in <class:Engine>'
+# /home/vagrant/.rvm/gems/ruby-2.3.1/gems/railties-4.2.7/lib/rails/initializable.rb:
+30:in `instance_exec'
+# /home/vagrant/.rvm/gems/ruby-2.3.1/gems/railties-4.2.7/lib/rails/initializable.rb:
+30:in `run'
+# /home/vagrant/.rvm/gems/ruby-2.3.1/gems/railties-4.2.7/lib/rails/initializable.rb:
+55:in `block in run_initializers'
+# /home/vagrant/.rvm/gems/ruby-2.3.1/gems/railties-4.2.7/lib/rails/initializable.rb:
+44:in `each'
+# /home/vagrant/.rvm/gems/ruby-2.3.1/gems/railties-4.2.7/lib/rails/initializable.rb:
+44:in `tsort_each_child'
+# /home/vagrant/.rvm/gems/ruby-2.3.1/gems/railties-4.2.7/lib/rails/initializable.rb:
+44:in `each'
+# /home/vagrant/.rvm/gems/ruby-2.3.1/gems/railties-4.2.7/lib/rails/initializable.rb:
+44:in `tsort_each_child'
+# /home/vagrant/.rvm/gems/ruby-2.3.1/gems/railties-4.2.7/lib/rails/initializable.rb:
+44:in `each'
+# /home/vagrant/.rvm/gems/ruby-2.3.1/gems/railties-4.2.7/lib/rails/initializable.rb:
+44:in `tsort_each_child'
+# /home/vagrant/.rvm/gems/ruby-2.3.1/gems/railties-4.2.7/lib/rails/initializable.rb:
+44:in `each'
+# /home/vagrant/.rvm/gems/ruby-2.3.1/gems/railties-4.2.7/lib/rails/initializable.rb:
+44:in `tsort_each_child'
+# /home/vagrant/.rvm/gems/ruby-2.3.1/gems/railties-4.2.7/lib/rails/initializable.rb:
+54:in `run_initializers'
+# /home/vagrant/.rvm/gems/ruby-2.3.1/gems/railties-4.2.7/lib/rails/application.rb:35
+2:in `initialize!'
+# ./config/environment.rb:5:in `<top (required)>'
+# /home/vagrant/.rvm/gems/ruby-2.3.1/gems/activesupport-4.2.7/lib/active_support/dep
+endencies.rb:274:in `require'
+# /home/vagrant/.rvm/gems/ruby-2.3.1/gems/activesupport-4.2.7/lib/active_support/dep
+endencies.rb:274:in `block in require'
+# /home/vagrant/.rvm/gems/ruby-2.3.1/gems/activesupport-4.2.7/lib/active_support/dep
+endencies.rb:240:in `load_dependency'
+# /home/vagrant/.rvm/gems/ruby-2.3.1/gems/activesupport-4.2.7/lib/active_support/dep
+endencies.rb:274:in `require'
+# ./spec/rails_helper.rb:4:in `<top (required)>'
+# /home/vagrant/.rvm/gems/ruby-2.3.1/gems/activesupport-4.2.7/lib/active_support/dep
+endencies.rb:274:in `require'
+# /home/vagrant/.rvm/gems/ruby-2.3.1/gems/activesupport-4.2.7/lib/active_support/dep
+endencies.rb:274:in `block in require'
+# /home/vagrant/.rvm/gems/ruby-2.3.1/gems/activesupport-4.2.7/lib/active_support/dep
+endencies.rb:240:in `load_dependency'
+# /home/vagrant/.rvm/gems/ruby-2.3.1/gems/activesupport-4.2.7/lib/active_support/dep
+endencies.rb:274:in `require'
+# ./spec/models/user_spec.rb:1:in `<top (required)>'
+# /home/vagrant/.rvm/gems/ruby-2.3.1/gems/activesupport-4.2.7/lib/active_support/dep
+endencies.rb:268:in `load'
+# /home/vagrant/.rvm/gems/ruby-2.3.1/gems/activesupport-4.2.7/lib/active_support/dep
+endencies.rb:268:in `block in load'
+# /home/vagrant/.rvm/gems/ruby-2.3.1/gems/activesupport-4.2.7/lib/active_support/dep
+endencies.rb:240:in `load_dependency'
+# /home/vagrant/.rvm/gems/ruby-2.3.1/gems/activesupport-4.2.7/lib/active_support/dep
+endencies.rb:268:in `load'
+
+An error occurred while loading ./spec/models/wall_spec.rb.
+Failure/Error: require File.expand_path('../../config/environment', __FILE__)
+
+RuntimeError:
+  can't modify frozen Array
+# /home/vagrant/.rvm/gems/ruby-2.3.1/gems/railties-4.2.7/lib/rails/engine.rb:577:in
+`unshift'
+# /home/vagrant/.rvm/gems/ruby-2.3.1/gems/railties-4.2.7/lib/rails/engine.rb:577:in
+`block in <class:Engine>'
+# /home/vagrant/.rvm/gems/ruby-2.3.1/gems/railties-4.2.7/lib/rails/initializable.rb:
+30:in `instance_exec'
+# /home/vagrant/.rvm/gems/ruby-2.3.1/gems/railties-4.2.7/lib/rails/initializable.rb:
+30:in `run'
+# /home/vagrant/.rvm/gems/ruby-2.3.1/gems/railties-4.2.7/lib/rails/initializable.rb:
+55:in `block in run_initializers'
+# /home/vagrant/.rvm/gems/ruby-2.3.1/gems/railties-4.2.7/lib/rails/initializable.rb:
+44:in `each'
+# /home/vagrant/.rvm/gems/ruby-2.3.1/gems/railties-4.2.7/lib/rails/initializable.rb:
+44:in `tsort_each_child'
+# /home/vagrant/.rvm/gems/ruby-2.3.1/gems/railties-4.2.7/lib/rails/initializable.rb:
+44:in `each'
+# /home/vagrant/.rvm/gems/ruby-2.3.1/gems/railties-4.2.7/lib/rails/initializable.rb:
+44:in `tsort_each_child'
+# /home/vagrant/.rvm/gems/ruby-2.3.1/gems/railties-4.2.7/lib/rails/initializable.rb:
+44:in `each'
+# /home/vagrant/.rvm/gems/ruby-2.3.1/gems/railties-4.2.7/lib/rails/initializable.rb:
+44:in `tsort_each_child'
+# /home/vagrant/.rvm/gems/ruby-2.3.1/gems/railties-4.2.7/lib/rails/initializable.rb:
+44:in `each'
+# /home/vagrant/.rvm/gems/ruby-2.3.1/gems/railties-4.2.7/lib/rails/initializable.rb:
+44:in `tsort_each_child'
+# /home/vagrant/.rvm/gems/ruby-2.3.1/gems/railties-4.2.7/lib/rails/initializable.rb:
+54:in `run_initializers'
+# /home/vagrant/.rvm/gems/ruby-2.3.1/gems/railties-4.2.7/lib/rails/application.rb:35
+2:in `initialize!'
+# ./config/environment.rb:5:in `<top (required)>'
+# /home/vagrant/.rvm/gems/ruby-2.3.1/gems/activesupport-4.2.7/lib/active_support/dep
+endencies.rb:274:in `require'
+# /home/vagrant/.rvm/gems/ruby-2.3.1/gems/activesupport-4.2.7/lib/active_support/dep
+endencies.rb:274:in `block in require'
+# /home/vagrant/.rvm/gems/ruby-2.3.1/gems/activesupport-4.2.7/lib/active_support/dep
+endencies.rb:240:in `load_dependency'
+# /home/vagrant/.rvm/gems/ruby-2.3.1/gems/activesupport-4.2.7/lib/active_support/dep
+endencies.rb:274:in `require'
+# ./spec/rails_helper.rb:4:in `<top (required)>'
+# /home/vagrant/.rvm/gems/ruby-2.3.1/gems/activesupport-4.2.7/lib/active_support/dep
+endencies.rb:274:in `require'
+# /home/vagrant/.rvm/gems/ruby-2.3.1/gems/activesupport-4.2.7/lib/active_support/dep
+endencies.rb:274:in `block in require'
+# /home/vagrant/.rvm/gems/ruby-2.3.1/gems/activesupport-4.2.7/lib/active_support/dep
+endencies.rb:240:in `load_dependency'
+# /home/vagrant/.rvm/gems/ruby-2.3.1/gems/activesupport-4.2.7/lib/active_support/dep
+endencies.rb:274:in `require'
+# ./spec/models/wall_spec.rb:1:in `<top (required)>'
+# /home/vagrant/.rvm/gems/ruby-2.3.1/gems/activesupport-4.2.7/lib/active_support/dep
+endencies.rb:268:in `load'
+# /home/vagrant/.rvm/gems/ruby-2.3.1/gems/activesupport-4.2.7/lib/active_support/dep
+endencies.rb:268:in `block in load'
+# /home/vagrant/.rvm/gems/ruby-2.3.1/gems/activesupport-4.2.7/lib/active_support/dep
+endencies.rb:240:in `load_dependency'
+# /home/vagrant/.rvm/gems/ruby-2.3.1/gems/activesupport-4.2.7/lib/active_support/dep
+endencies.rb:268:in `load'
+No examples found.
+
+
+Finished in 0.0331 seconds (files took 32.48 seconds to load)
+0 examples, 0 failures, 4 errors occurred outside of examples
+
+vagrant@vagrant-ubuntu-trusty-64:/vagrant/ruby_oct_2017/Alyssa_McKee/TTD/rspeconrai
+ls/WALLS$ rspec spec
+Running via Spring preloader in process 6651
+/vagrant/ruby_oct_2017/Alyssa_McKee/TTD/rspeconrails/WALLS/db/schema.rb doesn't exis
+t yet. Run `rake db:migrate` to create it, then try again. If you do not intend to u
+se a database, you should instead alter /vagrant/ruby_oct_2017/Alyssa_McKee/TTD/rspe
+conrails/WALLS/config/application.rb to limit the frameworks that will be loaded.
+
+An error occurred while loading ./spec/models/comment_spec.rb.
+Failure/Error: ActiveRecord::Migration.maintain_test_schema!
+
+ActiveRecord::PendingMigrationError:
+
+
+  Migrations are pending. To resolve this issue, run:
+
+        bin/rake db:migrate RAILS_ENV=test
+# /home/vagrant/.rvm/gems/ruby-2.3.1/gems/activerecord-4.2.7/lib/active_record/migra
+tion.rb:392:in `check_pending!'
+# /home/vagrant/.rvm/gems/ruby-2.3.1/gems/activerecord-4.2.7/lib/active_record/migra
+tion.rb:405:in `load_schema_if_pending!'
+# /home/vagrant/.rvm/gems/ruby-2.3.1/gems/activerecord-4.2.7/lib/active_record/migra
+tion.rb:411:in `block in maintain_test_schema!'
+# /home/vagrant/.rvm/gems/ruby-2.3.1/gems/activerecord-4.2.7/lib/active_record/migra
+tion.rb:642:in `suppress_messages'
+# /home/vagrant/.rvm/gems/ruby-2.3.1/gems/activerecord-4.2.7/lib/active_record/migra
+tion.rb:416:in `method_missing'
+# /home/vagrant/.rvm/gems/ruby-2.3.1/gems/activerecord-4.2.7/lib/active_record/migra
+tion.rb:411:in `maintain_test_schema!'
+# ./spec/rails_helper.rb:27:in `<top (required)>'
+# ./spec/models/comment_spec.rb:1:in `require'
+# ./spec/models/comment_spec.rb:1:in `<top (required)>'
+Running via Spring preloader in process 6658
+/vagrant/ruby_oct_2017/Alyssa_McKee/TTD/rspeconrails/WALLS/db/schema.rb doesn't exis
+t yet. Run `rake db:migrate` to create it, then try again. If you do not intend to u
+se a database, you should instead alter /vagrant/ruby_oct_2017/Alyssa_McKee/TTD/rspe
+conrails/WALLS/config/application.rb to limit the frameworks that will be loaded.
+
+An error occurred while loading ./spec/models/message_spec.rb.
+Failure/Error: ActiveRecord::Migration.maintain_test_schema!
+
+ActiveRecord::PendingMigrationError:
+
+
+  Migrations are pending. To resolve this issue, run:
+
+        bin/rake db:migrate RAILS_ENV=test
+# /home/vagrant/.rvm/gems/ruby-2.3.1/gems/activerecord-4.2.7/lib/active_record/migra
+tion.rb:392:in `check_pending!'
+# /home/vagrant/.rvm/gems/ruby-2.3.1/gems/activerecord-4.2.7/lib/active_record/migra
+tion.rb:405:in `load_schema_if_pending!'
+# /home/vagrant/.rvm/gems/ruby-2.3.1/gems/activerecord-4.2.7/lib/active_record/migra
+tion.rb:411:in `block in maintain_test_schema!'
+# /home/vagrant/.rvm/gems/ruby-2.3.1/gems/activerecord-4.2.7/lib/active_record/migra
+tion.rb:642:in `suppress_messages'
+# /home/vagrant/.rvm/gems/ruby-2.3.1/gems/activerecord-4.2.7/lib/active_record/migra
+tion.rb:416:in `method_missing'
+# /home/vagrant/.rvm/gems/ruby-2.3.1/gems/activerecord-4.2.7/lib/active_record/migra
+tion.rb:411:in `maintain_test_schema!'
+# ./spec/rails_helper.rb:27:in `<top (required)>'
+# /home/vagrant/.rvm/gems/ruby-2.3.1/gems/activesupport-4.2.7/lib/active_support/dep
+endencies.rb:274:in `require'
+# /home/vagrant/.rvm/gems/ruby-2.3.1/gems/activesupport-4.2.7/lib/active_support/dep
+endencies.rb:274:in `block in require'
+# /home/vagrant/.rvm/gems/ruby-2.3.1/gems/activesupport-4.2.7/lib/active_support/dep
+endencies.rb:240:in `load_dependency'
+# /home/vagrant/.rvm/gems/ruby-2.3.1/gems/activesupport-4.2.7/lib/active_support/dep
+endencies.rb:274:in `require'
+# ./spec/models/message_spec.rb:1:in `<top (required)>'
+# /home/vagrant/.rvm/gems/ruby-2.3.1/gems/activesupport-4.2.7/lib/active_support/dep
+endencies.rb:268:in `load'
+# /home/vagrant/.rvm/gems/ruby-2.3.1/gems/activesupport-4.2.7/lib/active_support/dep
+endencies.rb:268:in `block in load'
+# /home/vagrant/.rvm/gems/ruby-2.3.1/gems/activesupport-4.2.7/lib/active_support/dep
+endencies.rb:240:in `load_dependency'
+# /home/vagrant/.rvm/gems/ruby-2.3.1/gems/activesupport-4.2.7/lib/active_support/dep
+endencies.rb:268:in `load'
+Running via Spring preloader in process 6665
+/vagrant/ruby_oct_2017/Alyssa_McKee/TTD/rspeconrails/WALLS/db/schema.rb doesn't exis
+t yet. Run `rake db:migrate` to create it, then try again. If you do not intend to u
+se a database, you should instead alter /vagrant/ruby_oct_2017/Alyssa_McKee/TTD/rspe
+conrails/WALLS/config/application.rb to limit the frameworks that will be loaded.
+
+An error occurred while loading ./spec/models/user_spec.rb.
+Failure/Error: ActiveRecord::Migration.maintain_test_schema!
+
+ActiveRecord::PendingMigrationError:
+
+
+  Migrations are pending. To resolve this issue, run:
+
+        bin/rake db:migrate RAILS_ENV=test
+# /home/vagrant/.rvm/gems/ruby-2.3.1/gems/activerecord-4.2.7/lib/active_record/migra
+tion.rb:392:in `check_pending!'
+# /home/vagrant/.rvm/gems/ruby-2.3.1/gems/activerecord-4.2.7/lib/active_record/migra
+tion.rb:405:in `load_schema_if_pending!'
+# /home/vagrant/.rvm/gems/ruby-2.3.1/gems/activerecord-4.2.7/lib/active_record/migra
+tion.rb:411:in `block in maintain_test_schema!'
+# /home/vagrant/.rvm/gems/ruby-2.3.1/gems/activerecord-4.2.7/lib/active_record/migra
+tion.rb:642:in `suppress_messages'
+# /home/vagrant/.rvm/gems/ruby-2.3.1/gems/activerecord-4.2.7/lib/active_record/migra
+tion.rb:416:in `method_missing'
+# /home/vagrant/.rvm/gems/ruby-2.3.1/gems/activerecord-4.2.7/lib/active_record/migra
+tion.rb:411:in `maintain_test_schema!'
+# ./spec/rails_helper.rb:27:in `<top (required)>'
+# /home/vagrant/.rvm/gems/ruby-2.3.1/gems/activesupport-4.2.7/lib/active_support/dep
+endencies.rb:274:in `require'
+# /home/vagrant/.rvm/gems/ruby-2.3.1/gems/activesupport-4.2.7/lib/active_support/dep
+endencies.rb:274:in `block in require'
+# /home/vagrant/.rvm/gems/ruby-2.3.1/gems/activesupport-4.2.7/lib/active_support/dep
+endencies.rb:240:in `load_dependency'
+# /home/vagrant/.rvm/gems/ruby-2.3.1/gems/activesupport-4.2.7/lib/active_support/dep
+endencies.rb:274:in `require'
+# ./spec/models/user_spec.rb:1:in `<top (required)>'
+# /home/vagrant/.rvm/gems/ruby-2.3.1/gems/activesupport-4.2.7/lib/active_support/dep
+endencies.rb:268:in `load'
+# /home/vagrant/.rvm/gems/ruby-2.3.1/gems/activesupport-4.2.7/lib/active_support/dep
+endencies.rb:268:in `block in load'
+# /home/vagrant/.rvm/gems/ruby-2.3.1/gems/activesupport-4.2.7/lib/active_support/dep
+endencies.rb:240:in `load_dependency'
+# /home/vagrant/.rvm/gems/ruby-2.3.1/gems/activesupport-4.2.7/lib/active_support/dep
+endencies.rb:268:in `load'
+Running via Spring preloader in process 6673
+/vagrant/ruby_oct_2017/Alyssa_McKee/TTD/rspeconrails/WALLS/db/schema.rb doesn't exis
+t yet. Run `rake db:migrate` to create it, then try again. If you do not intend to u
+se a database, you should instead alter /vagrant/ruby_oct_2017/Alyssa_McKee/TTD/rspe
+conrails/WALLS/config/application.rb to limit the frameworks that will be loaded.
+
+An error occurred while loading ./spec/models/wall_spec.rb.
+Failure/Error: ActiveRecord::Migration.maintain_test_schema!
+
+ActiveRecord::PendingMigrationError:
+
+
+  Migrations are pending. To resolve this issue, run:
+
+        bin/rake db:migrate RAILS_ENV=test
+# /home/vagrant/.rvm/gems/ruby-2.3.1/gems/activerecord-4.2.7/lib/active_record/migra
+tion.rb:392:in `check_pending!'
+# /home/vagrant/.rvm/gems/ruby-2.3.1/gems/activerecord-4.2.7/lib/active_record/migra
+tion.rb:405:in `load_schema_if_pending!'
+# /home/vagrant/.rvm/gems/ruby-2.3.1/gems/activerecord-4.2.7/lib/active_record/migra
+tion.rb:411:in `block in maintain_test_schema!'
+# /home/vagrant/.rvm/gems/ruby-2.3.1/gems/activerecord-4.2.7/lib/active_record/migra
+tion.rb:642:in `suppress_messages'
+# /home/vagrant/.rvm/gems/ruby-2.3.1/gems/activerecord-4.2.7/lib/active_record/migra
+tion.rb:416:in `method_missing'
+# /home/vagrant/.rvm/gems/ruby-2.3.1/gems/activerecord-4.2.7/lib/active_record/migra
+tion.rb:411:in `maintain_test_schema!'
+# ./spec/rails_helper.rb:27:in `<top (required)>'
+# /home/vagrant/.rvm/gems/ruby-2.3.1/gems/activesupport-4.2.7/lib/active_support/dep
+endencies.rb:274:in `require'
+# /home/vagrant/.rvm/gems/ruby-2.3.1/gems/activesupport-4.2.7/lib/active_support/dep
+endencies.rb:274:in `block in require'
+# /home/vagrant/.rvm/gems/ruby-2.3.1/gems/activesupport-4.2.7/lib/active_support/dep
+endencies.rb:240:in `load_dependency'
+# /home/vagrant/.rvm/gems/ruby-2.3.1/gems/activesupport-4.2.7/lib/active_support/dep
+endencies.rb:274:in `require'
+# ./spec/models/wall_spec.rb:1:in `<top (required)>'
+# /home/vagrant/.rvm/gems/ruby-2.3.1/gems/activesupport-4.2.7/lib/active_support/dep
+endencies.rb:268:in `load'
+# /home/vagrant/.rvm/gems/ruby-2.3.1/gems/activesupport-4.2.7/lib/active_support/dep
+endencies.rb:268:in `block in load'
+# /home/vagrant/.rvm/gems/ruby-2.3.1/gems/activesupport-4.2.7/lib/active_support/dep
+endencies.rb:240:in `load_dependency'
+# /home/vagrant/.rvm/gems/ruby-2.3.1/gems/activesupport-4.2.7/lib/active_support/dep
+endencies.rb:268:in `load'
+No examples found.
+
+
+Finished in 0.00079 seconds (files took 1 minute 33.46 seconds to load)
+0 examples, 0 failures, 4 errors occurred outside of examples
+
+vagrant@vagrant-ubuntu-trusty-64:/vagrant/ruby_oct_2017/Alyssa_McKee/TTD/rspeconrai
+ls/WALLS$ rake db:migrate:status
+
+database: /vagrant/ruby_oct_2017/Alyssa_McKee/TTD/rspeconrails/WALLS/db/development.
+sqlite3
+
+ Status   Migration ID    Migration Name
+--------------------------------------------------
+   up     20171012221938  Create walls
+   up     20171012222417  Create messages
+   up     20171012222649  Create comments
+   up     20171012222712  Create users
+
+vagrant@vagrant-ubuntu-trusty-64:/vagrant/ruby_oct_2017/Alyssa_McKee/TTD/rspeconrai
+ls/WALLS$ rake db:migrate:statusbin/rake db:migrate RAILS_ENV=test
+rake aborted!
+Don't know how to build task 'db:migrate:statusbin/rake' (see --tasks)
+/home/vagrant/.rvm/gems/ruby-2.3.1/gems/rake-12.1.0/exe/rake:27:in `<top (required)>
+'
+/home/vagrant/.rvm/gems/ruby-2.3.1/bin/ruby_executable_hooks:15:in `eval'
+/home/vagrant/.rvm/gems/ruby-2.3.1/bin/ruby_executable_hooks:15:in `<main>'
+(See full trace by running task with --trace)
+vagrant@vagrant-ubuntu-trusty-64:/vagrant/ruby_oct_2017/Alyssa_McKee/TTD/rspeconrai
+ls/WALLS$ bin/rake db:migrate RAILS_ENV=test
+Running via Spring preloader in process 6807
+== 20171012221938 CreateWalls: migrating ======================================
+-- create_table(:walls)
+   -> 0.0529s
+== 20171012221938 CreateWalls: migrated (0.0548s) =============================
+
+== 20171012222417 CreateMessages: migrating ===================================
+-- create_table(:messages)
+   -> 0.0262s
+== 20171012222417 CreateMessages: migrated (0.0280s) ==========================
+
+== 20171012222649 CreateComments: migrating ===================================
+-- create_table(:comments)
+   -> 0.0215s
+== 20171012222649 CreateComments: migrated (0.0217s) ==========================
+
+== 20171012222712 CreateUsers: migrating ======================================
+-- create_table(:users)
+   -> 0.0991s
+== 20171012222712 CreateUsers: migrated (0.1018s) =============================
+
+vagrant@vagrant-ubuntu-trusty-64:/vagrant/ruby_oct_2017/Alyssa_McKee/TTD/rspeconrai
+ls/WALLS$ rspec spec
+.*******.FF.**.*
+
+Pending: (Failures listed here are expected and do not affect your suite's status)
+
+  1) Comment with invalid attributes should not save if content is less than 11 char
+acters
+     # Not yet implemented
+     # ./spec/models/comment_spec.rb:10
+
+  2) Comment with invalid attributes should not save if user reference is missing
+     # Not yet implemented
+     # ./spec/models/comment_spec.rb:12
+
+  3) Message creation with valid attributes should save
+     # Not yet implemented
+     # ./spec/models/message_spec.rb:6
+
+  4) Message creation with invalid attributes it should not save if messege is empty
+
+     # Not yet implemented
+     # ./spec/models/message_spec.rb:12
+
+  5) Message creation with invalid attributes should not save if it is less than 10
+characters
+     # Not yet implemented
+     # ./spec/models/message_spec.rb:14
+
+  6) Message creation with invalid attributes should not save if the user reference
+is missing
+     # Not yet implemented
+     # ./spec/models/message_spec.rb:16
+
+  7) Message creation with invalid attributes should not save if wall reference is m
+issing
+     # Not yet implemented
+     # ./spec/models/message_spec.rb:18
+
+  8) User with registration with invalid attributes should not save if an icon is no
+t chosen
+     # Not yet implemented
+     # ./spec/models/user_spec.rb:23
+
+  9) User with registration with invalid attributes should not save if the icon is n
+ot one of the three set icons
+     # Not yet implemented
+     # ./spec/models/user_spec.rb:25
+
+  10) Wall with invalid attributes should not save if name is empty
+     # Not yet implemented
+     # ./spec/models/wall_spec.rb:10
+
+
+Failures:
+
+  1) User with registration with invalid attributes should not save if username is e
+mpty
+     Failure/Error: expect(build(:user, username: "")).to be_invalid
+       expected `#<User id: nil, username: "", iconname: "maria", created_at: nil, u
+pdated_at: nil>.invalid?` to return true, got false
+     # ./spec/models/user_spec.rb:12:in `block (4 levels) in <top (required)>'
+
+  2) User with registration with invalid attributes should not save if username is t
+aken
+     Failure/Error: expect(user2).to be_invalid
+       expected `#<User id: 2, username: "bob", iconname: "rose", created_at: "2017-
+10-13 01:49:49", updated_at: "2017-10-13 01:49:49">.invalid?` to return true, got fa
+lse
+     # ./spec/models/user_spec.rb:17:in `block (4 levels) in <top (required)>'
+
+Finished in 1.79 seconds (files took 56.99 seconds to load)
+16 examples, 2 failures, 10 pending
+
+Failed examples:
+
+rspec ./spec/models/user_spec.rb:11 # User with registration with invalid attributes
+ should not save if username is empty
+rspec ./spec/models/user_spec.rb:14 # User with registration with invalid attributes
+ should not save if username is taken
+
