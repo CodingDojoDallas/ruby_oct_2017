@@ -1,6 +1,6 @@
 FactoryGirl.define do
   factory :user do
-    username "MyString"
-    iconname "MyString"
+    username "ErenYeagar"
+    iconname "maria"
   end
 end

@@ -1,6 +1,6 @@
 FactoryGirl.define do
   factory :wall do
-    name "MyString"
+    name "Maria"
     level 1
   end
 end
