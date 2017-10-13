@@ -1,14 +1,14 @@
 Rails.application.routes.draw do
 
-root 											'user#index'
+root 											'users#index'
 
-get 'users' 								=> 	'user#index', 		as: 'landing' 	#show login register form
+get 'users' 								=> 	'users#index', 		as: 'landing' 	#show login register form
 
-post 'users' 								=> 	'user#create', 		as: 'register'
+post 'users' 								=> 	'users#create', 		as: 'register'
 
-post 'users/login' 							=> 	'user#login', 		as: 'login'
+post 'users/login' 							=> 	'users#login', 		as: 'login'
 
-get 'users/logout' 							=> 	'user#logout', 		as: 'logout'
+get 'users/logout' 							=> 	'users#logout', 		as: 'logout'
 
 post 'walls/:name/messeges/:id/comments' 	=> 	'comments#create', 	as: 'create_comment' #create comment
 
