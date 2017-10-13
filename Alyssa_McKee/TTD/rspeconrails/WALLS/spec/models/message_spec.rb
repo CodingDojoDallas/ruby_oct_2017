@@ -15,6 +15,8 @@ RSpec.describe Message, type: :model do
 			
 			it "should not save if the user reference is missing"
 			
+			it "should not save if wall reference is missing"
+			
 		end #end invalid
   end #end with creation
 end
