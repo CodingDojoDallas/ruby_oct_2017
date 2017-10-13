@@ -2,12 +2,12 @@ require 'rails_helper'
 
 RSpec.describe User, type: :model do
   context "with registration" do
-	context "with valid attributes"	
+	context "with valid attributes"	do
 		it "should save" do
 			expect(build(:user)).to be_valid
 		end
 	end #valid attributes
-	context "with invalid attributes"
+	context "with invalid attributes" do
 		it "should not save if username is empty" do
 			expect(build(:user, username: "")).to be_invalid
 		end
