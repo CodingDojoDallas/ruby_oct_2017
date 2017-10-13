@@ -2,7 +2,7 @@ Rails.application.routes.draw do
 
 root 											'user#index'
 
-get 'users' 								=> 	'user#index', 		as: 'landing'
+get 'users' 								=> 	'user#index', 		as: 'landing' 	#show login register form
 
 post 'users' 								=> 	'user#create', 		as: 'register'
 
