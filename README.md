@@ -35,6 +35,7 @@ Sessions and Models Cover - https://youtu.be/mUX9UiKlq6Q <br>
 Ninja Gold https://youtu.be/Bjoyp3_CWV0 <br>
 Ruby TDD - https://youtu.be/8bIpaxANung <br>
 Rails TDD Part I - https://youtu.be/mkvg--izmm0 <br>
+Rails TDD Part II - https://youtu.be/vPjHE7Rtsss <br>
 
 ## Resources
 
