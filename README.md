@@ -36,6 +36,8 @@ Ninja Gold https://youtu.be/Bjoyp3_CWV0 <br>
 Ruby TDD - https://youtu.be/8bIpaxANung <br>
 Rails TDD Part I - https://youtu.be/mkvg--izmm0 <br>
 Rails TDD Part II - https://youtu.be/vPjHE7Rtsss <br>
+Dojo Secrets Setup - https://youtu.be/ZhZzJKEOl3Y <br>
+Login and Registration - https://youtu.be/m0K3NeEPo7E <br>
 
 ## Resources
 
