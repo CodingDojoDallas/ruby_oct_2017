@@ -2,6 +2,7 @@ class UsersController < ApplicationController
 	
 	def show
 		@user = User.find(params[:id])
+		@current_user = current_user
 	end
 	def new
 	
@@ -19,15 +20,32 @@ class UsersController < ApplicationController
 	end
 	def edit
 		return redirect_to(edit_user_path current_user) unless session[:user_id] == params[:id].to_i
-		
+		@user=User.find(params[:id])
 		
 	end
 	def update
-		# return redirect_to "users/#{user.id}"
+		user = current_user
+		user.update(update_params)
+		if user.save
+			return redirect_to "/users/#{user.id}"
+			
+		end
+		flash[:errors] = user.errors.full_messages
+		return redirect_to edit_user_path current_user.id
+	end
+	def destroy
+		user = current_user
+		user.destroy		
+		session.delete(:user_id)
+		
+		return redirect_to users_new_path
 	end
 	
 	private
 		def user_params
 			params.require(:user).permit(:name, :email, :password, :password_confirmation)
+		end
+		def update_params
+			params.require(:user).permit(:name, :email)
 		end
 end
