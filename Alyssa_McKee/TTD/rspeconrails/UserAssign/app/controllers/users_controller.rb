@@ -10,15 +10,17 @@ class UsersController < ApplicationController
 		user = User.create(user_params)
 		
 		if user.valid?
-			session[:user_id] = user.id
-			return redirect_to "/users/#{user.id}"
+			# session[:user_id] = user.id
+			return redirect_to "/sessions/new"
 		end
 		flash[:errors] = user.errors.full_messages
 		return redirect_to "/users/new"
 		
 	end
 	def edit
-	
+		return redirect_to(edit_user_path current_user) unless session[:user_id] == params[:id].to_i
+		
+		
 	end
 	def update
 		# return redirect_to "users/#{user.id}"

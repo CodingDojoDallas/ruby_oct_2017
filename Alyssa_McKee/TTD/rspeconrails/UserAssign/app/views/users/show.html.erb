@@ -1,5 +1,5 @@
 <header>
-	<h1><%= @user.name %></h1>
+	
 	<form action="<%= logout_path %>" method="POST">
 		<input type="hidden" name="_method" value="delete"/>
 		<input name="authenticity_token" value="<%=form_authenticity_token %>" type="hidden"/>
@@ -9,3 +9,10 @@
 	</form>
 	<a href="<%= logout_path %>" data-method="delete">Logout</a>
 </header>
+
+<h1><%= @user.name %></h1>
+
+<h3>Name: <%= @user.name %></h3>
+<h3>Email: <%= @user.email %></h3>
+
+<a href="<%= edit_user_path @user.id %>">Edit Profile</a>
