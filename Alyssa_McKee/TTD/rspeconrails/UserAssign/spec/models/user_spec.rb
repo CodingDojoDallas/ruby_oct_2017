@@ -26,7 +26,7 @@ RSpec.describe User, type: :model do
     end
     it 'email is not unique' do
       create(:user)
-      expect(build(:user)).to be_invalid
+      expect(create(:user)).to be_invalid
     end
     it 'password is blank' do
       expect(build(:user, password: '')).to be_invalid

@@ -1,7 +1,7 @@
 FactoryGirl.define do
   factory :user do
-    name "Oscar Vazquez"
-    email "oscar@gmail.com"
+    name "Midoriya Izuku"
+    email "Deku@almightfanclub.com"
     password "password"
     password_confirmation "password"
   end

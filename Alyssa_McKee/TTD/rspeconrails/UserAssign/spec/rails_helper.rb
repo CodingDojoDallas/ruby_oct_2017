@@ -3,8 +3,11 @@ require 'spec_helper'
 ENV['RAILS_ENV'] ||= 'test'
 require File.expand_path('../../config/environment', __FILE__)
 abort("The Rails environment is running in production mode!") if Rails.env.production?
-require 'spec_helper'
+require 'factory_girl_rails'
 require 'rspec/rails'
+
+Dir[Rails.root.join('spec/support/**/*.rb')].each { |f| require f }
+
 # This is set so that our testing database matches our development database after migrations. 
 ActiveRecord::Migration.maintain_test_schema!
 RSpec.configure do |config|
@@ -12,7 +15,7 @@ RSpec.configure do |config|
 	config.include FactoryGirl::Syntax::Methods
 	
 			#if you are using it:
-	#config.include CapybaraHelper 
+	config.include CapybaraHelpers
 
 	
 			# This is set so that the test database is cleared after our tests are complete. 
