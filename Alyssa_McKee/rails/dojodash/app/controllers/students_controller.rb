@@ -17,7 +17,7 @@ class StudentsController < ApplicationController
 	def update
 		student = Student.find(params[:id])
 		dojo = Dojo.find(params[:dojo_id])
-		student.update(student_params, dojo: dojo)
+		student.update(student_params)
 		if student.errors.any?
 			flash[:notice] = student.errors.full_messages
 			return redirect_to "/dojos/#{student.dojo_id}/students/#{student.id}/edit"
@@ -41,6 +41,6 @@ class StudentsController < ApplicationController
 	end
 	private
 		def student_params
-			return params.require(:students).permit(:first_name, :last_name, :email)
+			return params.require(:students).permit(:first_name, :last_name, :email, :dojo)
 		end
 end
