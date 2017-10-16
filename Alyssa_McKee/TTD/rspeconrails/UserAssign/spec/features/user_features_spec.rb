@@ -69,7 +69,6 @@ feature 'User Settings features ' do
       expect(page).to have_text('Another Name')
     end
     scenario "destroys user and redirects to registration page" do
-      p current_path
 	  click_button 'Delete Account'
       expect(current_path).to eq('/users/new')
       # Make sure that you're clearing session on destroy
