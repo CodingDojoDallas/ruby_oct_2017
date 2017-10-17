@@ -23,4 +23,10 @@ Rails.application.routes.draw do
 	post	'secrets'		=> 	'secrets#create'
 	
 	delete 	'secrets/:id'	=>	'secrets#destroy'
+	
+	#likes routes
+	post	'likes'		=>	'likes#create'
+	delete	'likes'		=>	'likes#destroy', as: 'delete_like'
+	
+	
 end

@@ -13,3 +13,49 @@
  *= require_tree .
  *= require_self
  */
+.error{color: red;} 
+ 
+.secret{
+	display: inline-block;
+	width: 200px;
+	vertical-align: top;
+	padding: 5px;
+	margin: 10px;
+	border: 2px solid black;
+}
+	.secret>p:first-child{
+		height: 100px;
+	}
+	.secret form{
+		display: inline-block;
+		width: 33%;
+		
+	}
+		.secret .buttons *{
+			vertical-align: top;
+		}
+		.secret .delete{
+			float: right;
+		}
+			.secret button{
+				display: inline-block;
+				border-radius:5px;
+				width: 100%;
+			}
+			.secret .like button{
+				background: lightblue;
+			}
+			.secret .delete button{
+				background: red;
+				color: white;
+			}
+	.secret .count{
+		display: inline-block;
+		font-weight: bold;
+		color: teal;
+		margin: 2px;
+		width: 32%;
+		padding: 1px 0px 1px 0px;
+		border-radius:5px;
+		text-align: center;
+	}

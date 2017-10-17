@@ -1,6 +1,8 @@
 class SecretsController < ApplicationController
 	def index
 		@secrets = Secret.all
+		@current_likes = current_user.secrets_liked
+		@current_user = current_user
 	end
 	def create
 		secret = Secret.create(secret_params)

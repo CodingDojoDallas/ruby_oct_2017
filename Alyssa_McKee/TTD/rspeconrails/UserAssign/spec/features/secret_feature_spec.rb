@@ -23,7 +23,7 @@ feature "secret features" do
 		scenario "destroy secret from profile page, redirects to user profile page" do
 			secret = create(:secret, user: @user)
 			visit "/users/#{@user.id}"
-			click_link 'Delete Secret'
+			click_button 'Delete'
 			expect(current_path).to eq("/users/#{@user.id}")
 			expect(page).not_to have_text(secret.content)
 		end		
@@ -40,7 +40,7 @@ feature "secret features" do
 			expect(page).to have_text(@secret2.content)			
 		end
 		scenario "destroy secret from index page, redirects to user profile page" do 
-			click_link 'Delete Secret'
+			click_button 'Delete'
 			expect(current_path).to eq("/users/#{@user.id}")
 			expect(page).not_to have_text(@secret.content)			
 		end		

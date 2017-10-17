@@ -2,8 +2,12 @@ class UsersController < ApplicationController
 	
 	def show
 		@user = User.find(params[:id])
-		@current_user = current_user
 		@secrets = @user.secrets
+		@likes = @user.secrets_liked
+		
+		@current_user = current_user
+		@current_likes = current_user.secrets_liked
+		
 	end
 	def new
 	
