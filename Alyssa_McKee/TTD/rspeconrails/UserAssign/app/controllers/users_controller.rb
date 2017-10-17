@@ -5,6 +5,7 @@ class UsersController < ApplicationController
 	before_action :logout_required, only: [:new, :create]
 	
 	def show
+		return redirect_to("/users/#{current_user.id}") unless session[:user_id] == params[:id].to_i
 		@user = User.find(params[:id])
 		@secrets = @user.secrets
 		@likes = @user.secrets_liked
@@ -44,6 +45,7 @@ class UsersController < ApplicationController
 	end
 	
 	def destroy
+		return redirect_to(destroy_user_path current_user) unless session[:user_id] == params[:id].to_i
 		user = current_user
 		user.destroy		
 		session.delete(:user_id)
