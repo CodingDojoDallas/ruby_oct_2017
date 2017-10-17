@@ -1,4 +1,6 @@
 class SecretsController < ApplicationController
+	before_action :login_required
+	
 	def index
 		@secrets = Secret.all
 		@current_likes = current_user.secrets_liked

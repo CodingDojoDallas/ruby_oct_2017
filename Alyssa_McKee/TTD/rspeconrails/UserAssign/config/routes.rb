@@ -4,6 +4,8 @@ Rails.application.routes.draw do
 	
 	#users routes
 	get 	'users/new' 	 	=> 	'users#new'
+	get 	'register' 	 		=> 	'users#new'
+	
 	post 	'users'			 	=> 	'users#create'
 	
 	get 	'users/:id' 	 	=> 	'users#show'
@@ -15,6 +17,8 @@ Rails.application.routes.draw do
 	
 	#session routes
 	get		'sessions/new'	 	=>	'sessions#new',		as: 'login'
+	get		'login'			 	=>	'sessions#new'
+	
 	post 	'sessions'		 	=>	'sessions#create'
 	delete  'sessions'		 	=> 	'sessions#destroy',	as: 'logout'
 	

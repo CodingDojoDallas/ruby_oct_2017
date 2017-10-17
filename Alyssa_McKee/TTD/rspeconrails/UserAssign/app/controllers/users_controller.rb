@@ -1,5 +1,9 @@
 class UsersController < ApplicationController
 	
+	before_action :login_required, except: [:new, :create]
+	
+	before_action :logout_required, only: [:new, :create]
+	
 	def show
 		@user = User.find(params[:id])
 		@secrets = @user.secrets

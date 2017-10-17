@@ -1,4 +1,6 @@
 class LikesController < ApplicationController
+	before_action :login_required
+	
 	def create
 			user = current_user
 			#TODO check if secret exists
