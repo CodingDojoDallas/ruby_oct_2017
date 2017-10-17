@@ -1,7 +1,10 @@
 class SessionsController < ApplicationController
 	before_action :logout_required, only: [:new, :create]
 	
-	before_action :login_required, except: [:new, :create]
+	before_action :login_required, except: [:new, :create, :error]
+	def error
+		@path = params[:path]
+	end
 	
 	def new
 		

@@ -32,5 +32,6 @@ Rails.application.routes.draw do
 	post	'likes'		=>	'likes#create'
 	delete	'likes'		=>	'likes#destroy', as: 'delete_like'
 	
-	
+	#catch all ?
+	match 	'*path'	=>	'sessions#error', via: :all
 end
