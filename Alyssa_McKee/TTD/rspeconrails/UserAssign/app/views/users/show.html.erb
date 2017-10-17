@@ -8,7 +8,7 @@
 	<a href="<%= edit_user_path @user.id %>">Edit Profile</a>
 <% end %>
 
-
+<!-- ############### displays users's secrets #################### -->
 <h2><%= @user.name %>'s Secrets</h2>
 <% if @secrets.any? %>
 	<% @secrets.each do |secret| %>
@@ -51,8 +51,27 @@
 	
 <% end %>
 
+<!-- ########################### add user form ######################## -->
+
+<% if @user == @current_user %>
+	<h3>Reveal your secrets to the world</h3>
+	<% if flash[:errors] %>
+		<% flash[:errors].each do |error| %>
+			<p class="error" ><%= error %></p>
+		<% end %>
+	<% end %>
+	<form action="<%= secrets_path %>" method="POST">
+		<input name="authenticity_token" value="<%=form_authenticity_token %>" type="hidden"/>
+		<textarea name="secret[content]" id="Content" cols="30" rows="10"></textarea>
+		<br/>
+		<button type="submit">Create Secret</button>
+	</form>
+<% end %>
+
+<!-- ############################# User's liked secrets ####################### -->
+
 <h2><%= @user.name %>'s liked secrets</h2>
-<% if @likes %>
+<% if @likes.any? %>
 	<% @likes.each do |secret| %>
 		<div class="secret">
 			<p><%= secret.content %></p>
@@ -89,22 +108,4 @@
 	<% end %>
 <% else %>
 	<p>no liked secrets</p>
-<% end %>
-
-
-
-
-<% if @user == @current_user %>
-	<h3>Reveal your secrets to the world</h3>
-	<% if flash[:errors] %>
-		<% flash[:errors].each do |error| %>
-			<p class="error" ><%= error %></p>
-		<% end %>
-	<% end %>
-	<form action="<%= secrets_path %>" method="POST">
-		<input name="authenticity_token" value="<%=form_authenticity_token %>" type="hidden"/>
-		<textarea name="secret[content]" id="Content" cols="30" rows="10"></textarea>
-		<br/>
-		<button type="submit">Create Secret</button>
-	</form>
 <% end %>
