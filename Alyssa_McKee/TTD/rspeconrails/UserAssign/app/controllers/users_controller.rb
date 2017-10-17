@@ -3,6 +3,7 @@ class UsersController < ApplicationController
 	def show
 		@user = User.find(params[:id])
 		@current_user = current_user
+		@secrets = @user.secrets
 	end
 	def new
 	
@@ -37,7 +38,6 @@ class UsersController < ApplicationController
 		user = current_user
 		user.destroy		
 		session.delete(:user_id)
-		
 		return redirect_to users_new_path
 	end
 	

@@ -3,4 +3,39 @@
 <h3>Name: <%= @user.name %></h3>
 <h3>Email: <%= @user.email %></h3>
 
-<a href="<%= edit_user_path @user.id %>">Edit Profile</a>
+
+<% if @user == @current_user %>
+	<a href="<%= edit_user_path @user.id %>">Edit Profile</a>
+<% end %>
+
+
+<h2><%= @user.name %>'s Secrets</h2>
+<% if @secrets.any? %>
+	<% @secrets.each do |secret| %>
+		<p><%= secret.content %></p>
+		
+		<% if @user == @current_user %>
+			<p><a href="<%= secrets_path + "/" + secret.id.to_s %>" data-method="delete" >Delete Secret</a></p>
+		<% end %>
+	
+	<% end %>
+
+<% else %>
+	<p>no secrets here</p>	
+	
+<% end %>
+
+<% if @user == @current_user %>
+	<h3>Reveal your secrets to the world</h3>
+	<% if flash[:errors] %>
+		<% flash[:errors].each do |error| %>
+			<p><%= error %></p>
+		<% end %>
+	<% end %>
+	<form action="<%= secrets_path %>" method="POST">
+		<input name="authenticity_token" value="<%=form_authenticity_token %>" type="hidden"/>
+		<textarea name="secret[content]" id="Content" cols="30" rows="10"></textarea>
+		<br/>
+		<button type="submit">Create Secret</button>
+	</form>
+<% end %>

@@ -3,18 +3,27 @@
 <head>
   <title>UserAssign</title>
 	<%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
-  <%= csrf_meta_tags %>
+	<%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+	<%= csrf_meta_tags %>
+	<style type="text/css">
+		header form{
+			display: inline-block;
+		}
+	</style>
 </head>
 
 <header>
 	<% if current_user %>
+		<button onclick="location='/secrets'">View Secrets</button>
+		<button onclick="location='/users/<%= current_user.id %>'">My Profile</button>
+		
+
 		<form action="<%= logout_path %>" method="POST">
 			<input type="hidden" name="_method" value="delete"/>
 			<input name="authenticity_token" value="<%=form_authenticity_token %>" type="hidden"/>
 			<button type="submit">Logout</button>
 		</form>
-		<form action="<%= destroy_user_path @user.id %>" method="POST">
+		<form action="<%= destroy_user_path current_user.id %>" method="POST">
 			<input type="hidden" name="_method" value="delete"/>
 			<input name="authenticity_token" value="<%=form_authenticity_token %>" type="hidden"/>
 			<button type="submit">Delete Account</button>
