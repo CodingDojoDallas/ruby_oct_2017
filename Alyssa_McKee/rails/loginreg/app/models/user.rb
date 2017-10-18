@@ -3,7 +3,7 @@ class User < ActiveRecord::Base
   EMAIL_REGEX= /.+@.+\..+/
   validates :first_name, :last_name, :email,  presence: true
   
-  validates :password, :password_digest, presence: true, on: :create
+  validates :password, :password_confirmation, presence: true, on: :create
   
   validates :first_name, :last_name, length: {minimum: 2}
   
