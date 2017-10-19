@@ -50,6 +50,8 @@ Belt Reviewer IV (Finshing Out) - https://youtu.be/XsWiIbpZfD4 <br>
 
 Self Join Many To Many - https://youtu.be/fhCNn1XTuy0 <br>
 
+Deployment - https://youtu.be/V2Frb35zpBA <br>
+
 ## Resources
 
 [Ruby v2.3.1 Documentation](http://ruby-doc.org/core-2.3.1/ "Ruby v2.3.1 Documentation") <br>
