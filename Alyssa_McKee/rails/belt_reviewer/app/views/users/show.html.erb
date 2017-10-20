@@ -1,0 +1,124 @@
+<div id="container">
+
+	<div class="sidebar">
+		<h1><%= @user.first_name %>'s Profile</h1>
+		<h3>First Name: <%= @user.first_name %></h3>
+		<h3>Last Name: <%= @user.last_name %></h3>
+		<h3>Email: <%= @user.email %></h3>
+		<h3>Location: <%= @user.location.city %>, <%= @user.location.state %></h3>
+		<% if current_user.id == @user.id %>
+			<p><a href="<%= edit_user_path @user.id %>">edit profile</a></p>
+		<% end %>
+	</div>
+	<div class="content">
+	<h2><%= @user.first_name %>'s hosted events</h2>
+	<table>
+			<thead>
+				<tr>
+					<th>Name</th>
+					<th>Date</th>
+					<th>Location</th>
+					<th>State</th>
+					<th>Host</th>
+					<th>Action/Status</th>
+				</tr>
+			</thead>
+			<tbody>
+			<% @hosting.each do |event| %>
+				<tr>
+					<td><a href="<%= show_event_path event.id %>"><%= event.name %></a></td>
+					<td><%= event.date %></td>
+					<td><%= event.location.city.capitalize %></td>
+					<td><%= event.location.state %></td>
+					<td><a href="<%= show_user_path event.host.id %>"><%= event.host.first_name %></a></td>
+					
+					<td>
+						
+						<% if not attending? event and not hosting? event%>
+							<form class="inline" action="<%= join_event_path event.id%>" method="post">
+								<button class="blue sm">join</button>
+								<input name="authenticity_token" value="<%=form_authenticity_token %>" type="hidden"/>
+							</form>
+						<% elsif not hosting? event%>
+							<form class="inline" action="<%=  cancel_event_path event.id%>" method="post">
+								<button class="orange sm"> cancel </button>
+								<input name="authenticity_token" value="<%=form_authenticity_token %>" type="hidden"/>
+								<input type="hidden" name="_method" value="delete"/>
+							</form>
+						<% else %>
+							<form class="inline" action="<%= edit_event_path event.id%>" method="get">
+								<button class="green sm">edit</button>
+								<input name="authenticity_token" value="<%=form_authenticity_token %>" type="hidden"/>
+							</form>
+							<form class="inline" action="<%= destroy_event_path event.id%>" method="post">
+								<button class="red sm">delete</button>
+								<input name="authenticity_token" value="<%=form_authenticity_token %>" type="hidden"/>
+								<input type="hidden" name="_method" value="delete"/>
+							</form>
+						<% end %>
+						
+						
+					
+					
+					</td>
+				</tr>
+			<% end %>
+			</tbody>				
+		</table>
+		<h2><%= @user.first_name %>'s joined events</h2>
+		<table>
+			<thead>
+				<tr>
+					<th>Name</th>
+					<th>Date</th>
+					<th>Location</th>
+					<th>State</th>
+					<th>Host</th>
+					<th>Action/Status</th>
+				</tr>
+			</thead>
+			<tbody>
+			<% @attending.each do |event| %>
+				<tr>
+					<td><a href="<%= show_event_path event.id %>"><%= event.name %></a></td>
+					<td><%= event.date %></td>
+					<td><%= event.location.city.capitalize %></td>
+					<td><%= event.location.state %></td>
+					<td><a href="<%= show_user_path event.host.id %>"><%= event.host.first_name %></a></td>
+					
+					<td>
+						
+						<% if not attending? event and not hosting? event%>
+							<form class="inline" action="<%= join_event_path event.id%>" method="post">
+								<button class="blue sm">join</button>
+								<input name="authenticity_token" value="<%=form_authenticity_token %>" type="hidden"/>
+							</form>
+						<% elsif not hosting? event%>
+							<form class="inline" action="<%=  cancel_event_path event.id%>" method="post">
+								<button class="orange sm"> cancel </button>
+								<input name="authenticity_token" value="<%=form_authenticity_token %>" type="hidden"/>
+								<input type="hidden" name="_method" value="delete"/>
+							</form>
+						<% else %>
+							<form class="inline" action="<%= edit_event_path event.id%>" method="get">
+								<button class="green sm">edit</button>
+								<input name="authenticity_token" value="<%=form_authenticity_token %>" type="hidden"/>
+							</form>
+							<form class="inline" action="<%= destroy_event_path event.id%>" method="post">
+								<button class="red sm">delete</button>
+								<input name="authenticity_token" value="<%=form_authenticity_token %>" type="hidden"/>
+								<input type="hidden" name="_method" value="delete"/>
+							</form>
+						<% end %>
+						
+						
+					
+					
+					</td>
+				</tr>
+			<% end %>
+			</tbody>				
+		</table>
+	
+	</div>
+</div>

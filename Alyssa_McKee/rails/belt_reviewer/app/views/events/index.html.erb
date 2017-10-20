@@ -1,0 +1,153 @@
+<div id="container">
+	<div class="sidebar">
+		<h2>Create an Event</h2>
+		<form class="form" action="<%= create_event_path %>" method="POST">
+			<input name="authenticity_token" value="<%=form_authenticity_token %>" type="hidden"/>
+			<div>
+				<label for="Name">Name:</label>
+				<input type="text" name="event[name]" id="Name"/>
+			</div>
+			<div>
+				<label for="Date">Date</label>
+				<input type="date" name="event[date]"/>
+			</div>
+			<div>
+				<label for="Location">Location</label>
+				<input type="text" name="location[city]" id="city"/>
+				<select name="location[state]" id="state">
+				<% @states.each do |state| %>
+					<option <% if state == @user.location.state%> selected <% end %> ><%= state %></option>
+				<% end %>
+				</select>
+			</div>
+			<button class="green" type="submit">Add Event</button>
+			<% if flash[:errors] %>
+				<% flash[:errors].each do |error| %>
+					<p class="error"><%= error %></p>
+				<% end %>
+			<% end %>
+			
+		</form>
+
+	</div>
+	
+	<div class="content">
+		<h3 style="margin-top: 50px" >Here are some events in your state:</h3>
+		<table>
+			<thead>
+				<tr>
+					<th>Name</th>
+					<th>Date</th>
+					<th>Location</th>
+					<th>Host</th>
+					<th>Action/Status</th>
+				</tr>
+			</thead>
+			<tbody>
+			<% @instate_events.each do |event| %>
+				<tr>
+					<td><a href="<%= show_event_path event.id %>"><%= event.name %></a></td>
+					<td><%= event.date %></td>
+					<td><%= event.location.city.capitalize %></td>
+					<td><a href="<%= show_user_path event.host.id %>"><%= event.host.first_name %></a></td>
+					
+					<td>
+						
+						<% if not attending? event and not hosting? event%>
+							<form class="inline" action="<%= join_event_path event.id%>" method="post">
+								<button class="blue sm">join</button>
+								<input name="authenticity_token" value="<%=form_authenticity_token %>" type="hidden"/>
+							</form>
+						<% elsif not hosting? event%>
+							<form class="inline" action="<%=  cancel_event_path event.id%>" method="post">
+								<button class="orange sm"> cancel </button>
+								<input name="authenticity_token" value="<%=form_authenticity_token %>" type="hidden"/>
+								<input type="hidden" name="_method" value="delete"/>
+							</form>
+						<% else %>
+							<form class="inline" action="<%= edit_event_path event.id%>" method="get">
+								<button class="green sm">edit</button>
+								<input name="authenticity_token" value="<%=form_authenticity_token %>" type="hidden"/>
+							</form>
+							<form class="inline" action="<%= destroy_event_path event.id%>" method="post">
+								<button class="red sm">delete</button>
+								<input name="authenticity_token" value="<%=form_authenticity_token %>" type="hidden"/>
+								<input type="hidden" name="_method" value="delete"/>
+							</form>
+						<% end %>
+						
+						
+					
+					
+					</td>
+				</tr>
+			<% end %>
+			</tbody>				
+		</table>			
+		<h3>Here are some out of state events:</h3>
+		<% if @out_of_state_events.any? %>
+			
+			<table>
+				<thead>
+					<tr>
+						<th>Name</th>
+						<th>Date</th>
+						<th>Location</th>
+						<th>State</th>
+						<th>Host</th>
+						<th>Action/Status</th>
+					</tr>
+				</thead>
+				<tbody>
+					<% @out_of_state_events.each do |event| %>
+						<tr>
+							<td>
+								<a href="<%= show_event_path event.id %>"><%= event.name %></a>
+							</td>
+							<td>
+								<%= event.date %>
+							</td>
+							<td>
+								<%= event.location.city.capitalize %>
+							</td>
+							<td>
+								<%= event.location.state %>
+							</td>
+							<td>
+								<a href="<%= show_user_path event.host.id %>"><%= event.host.first_name %></a>
+							</td>
+							<td>
+								<% if not attending? event and not hosting? event%>
+									<form class="inline" action="<%= join_event_path event.id%>" method="post">
+										<button class="blue sm">join</button>
+										<input name="authenticity_token" value="<%=form_authenticity_token %>" type="hidden"/>
+									</form>
+								<% elsif not hosting? event%>
+									<form class="inline" action="<%=  cancel_event_path event.id%>" method="post">
+										<button class="orange sm"> cancel </button>
+										<input name="authenticity_token" value="<%=form_authenticity_token %>" type="hidden"/>
+										<input type="hidden" name="_method" value="delete"/>
+									</form>
+								<% else %>
+									<form class="inline" action="<%= edit_event_path event.id%>" method="get">
+										<button class="green sm">edit</button>
+										<input name="authenticity_token" value="<%=form_authenticity_token %>" type="hidden"/>
+									</form>
+									<form class="inline" action="<%= destroy_event_path event.id%>" method="post">
+										<button class="red sm">delete</button>
+										<input name="authenticity_token" value="<%=form_authenticity_token %>" type="hidden"/>
+										<input type="hidden" name="_method" value="delete"/>
+									</form>
+								<% end %>
+								
+								
+							</td>
+						</tr>
+					<% end %>
+				</tbody>
+			</table>
+		<% end %>
+		
+	</div>
+	
+</div>

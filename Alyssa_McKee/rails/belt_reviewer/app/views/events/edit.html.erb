@@ -1,0 +1,38 @@
+<div id="container">
+	<div id="content">
+		<form class="form" action="<%= update_event_path @event.id %>" method="POST">
+			<input name="authenticity_token" value="<%=form_authenticity_token %>" type="hidden"/>
+			<input type="hidden" name="_method" value="put"/>
+			<div>
+				<label for="Name">Name:</label>
+				<input type="text" name="event[name]" id="Name" value="<%= @event.name %>" />
+			</div>
+			<div>
+				<label for="Date">Date</label>
+				<input type="date" name="event[date]" value="<%= @event.date %>"/>
+			</div>
+			<div>
+				<label for="Location">Location</label>
+				<input type="text" name="location[city]" id="city" value="<%= @event.location.city %>"/>
+				<select name="location[state]" id="state">
+				<% @states.each do |state| %>
+					<option <% if state == @state%> selected <% end %> ><%= state %></option>
+				<% end %>
+				</select>
+			</div>
+			<% if flash[:errors] %>
+				<% flash[:errors].each do |error| %>
+					<p class="error"><%= error %></p>
+				<% end %>
+			<% end %>
+			<button class="green" type="submit">Save Event</button>
+			
+			
+		</form>
+		<form class="form inline" action="<%= destroy_event_path @event.id %>" method="POST">
+				<input name="authenticity_token" value="<%=form_authenticity_token %>" type="hidden"/>
+				<input type="hidden" name="_method" value="delete"/>
+			<button class="red">Delete Event</button>
+		</form>
+	</div>
+</div>
