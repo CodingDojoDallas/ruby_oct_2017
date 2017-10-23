@@ -54,6 +54,8 @@ Relations are Hard - https://youtu.be/YW6X53ia2Z8 <br>
 
 Deployment - https://youtu.be/V2Frb35zpBA <br>
 
+Sort by count of a relation - https://youtu.be/p5UOxHR2200 <br>
+
 ## Resources
 
 [Ruby v2.3.1 Documentation](http://ruby-doc.org/core-2.3.1/ "Ruby v2.3.1 Documentation") <br>
