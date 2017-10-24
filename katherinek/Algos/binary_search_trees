@@ -1,0 +1,55 @@
+var BTNode = function(value) {
+ this.value = value;
+ this.left = null;
+ this.right = null;
+}
+
+var BST = function()
+this.root=null;
+
+
+this.add = function(value, runner=this.root){
+  if (this.root === null){
+  this.root = value;
+  return this 
+  }
+  if (this.root == value){
+    return tree;
+  }
+  if (value < runner.value){
+    if (runner.left === null){
+      runner.left = BTNode(value)
+      return this
+    }  
+    else{
+      runner = runner.left
+    }
+  }
+  else{
+    if (runner.right === null){
+      runner.right = BTNode(value)
+      return this
+    }
+    else {
+      runner = runner.right
+    }
+  }
+  this.contains(value, runner)
+}
+
+
+this.contains = function(value, runner=BST.root){
+  if (runner === null){
+    return false;
+  }
+  if (runner.value == value){
+    return true;
+  }
+  if (value < runner.value ){
+    runner = runner.left
+  }
+  else {
+    runner = runner.right
+  }
+  this.contains(value, runner)
+}
