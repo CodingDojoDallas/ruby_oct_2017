@@ -1,0 +1,31 @@
+<h1>Welcome, <%= current_user.first_name %> <%= current_user.last_name %></h1>
+    <div class='col-md-6'>
+        <form class='form-group' action='<%= new_idea_path %>' method='post'>
+            <input type='hidden' name='authenticity_token' value='<%= form_authenticity_token %>'>
+            <!-- Content  -->
+            <div class="form-group">
+                <input name='idea[content]' type="content" id='content' class="form-control" placeholder="Idea">
+            </div>
+            <div>
+                <button type="submit" class="btn btn-primary">Idea!</button>
+            </div>
+        </form>
+    </div>
+    <div>
+        <%# list ideas here %>
+        <% @ideas.each do |idea| %>
+            <h4><a href='<%= showone_path idea.user_id %>'><%= idea.user.first_name %></a> says: <div style='display:inline-block; border:2px solid black;width:40%;'><%= idea.content %></div></h4>
+            <% unless current_user == idea.user %>
+                <% if current_user.liked.exclude? idea %>
+                    <p><a href='<%= like_idea_path idea.id %>' data-method='post'>Like</a></p>
+                <% else %>
+                    <p><a href='<%= unlike_idea_path idea.id %>' data-method='delete'>Unlike</a></p>
+                <% end %>
+            <% else %>
+                <p><a href='<%= destroy_idea_path idea.id %>' data-method='delete'>Delete</a></p>
+            <% end %>
+            <p><a href='<%= oneidea_path idea.id %>'><%= idea.liker.count %> people</a> like this.</p>
+
+        <% end %>
+
+    </div>

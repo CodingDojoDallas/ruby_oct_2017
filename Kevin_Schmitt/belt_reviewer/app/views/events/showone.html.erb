@@ -1,0 +1,54 @@
+<%# <h1>Showone page</h1> %>
+<h1><%= @event.name %></h1>
+<h3>Host: <%= @event.user.first_name %></h3>
+<h3>Date: <%= @event.date %></h3>
+<h3>Location: <%= @event.city %>, <%= @event.state %></h3>
+<h3>People who are attending: <%= @event.attendees.count %></h3>
+<a href='/events'>Go Back</a>
+<hr>
+<div class='row'>
+    <div class='col-md-6'>
+        <table class='table'>
+            <thead>
+                <tr>
+                    <th>Name:</th>
+                    <th>Lacation:</th>
+                    <th>State:</th>
+                </tr>
+            </thead>
+            <tbody>
+                <% @event.attendees.each do |user| %>
+                    <% unless user == @event.user %>
+                        <tr>
+                            <td><%= user.first_name %></td>
+                            <td><%= user.city %></td>
+                            <td><%= user.state %></td>
+                        </tr>
+                    <% end %>
+                <% end %>
+            </tbody>
+
+
+        </table>
+    </div>
+    <div class='col-md-6'>
+        <h4>Disscussion about this event</h4>
+        <div id='messages'>
+            <% if @event.messages %>
+                <% @event.messages.each do |message| %>
+                    <p><%= message.user.first_name %> says: <%= message.content %></p>
+                    <p>-------------</p>
+                <% end %>
+            <% else %>
+                <p>No messages</p>
+            <% end %>
+        </div>
+        <form action='<%= message_path @event.id %>' method='post'>
+            <input type='hidden' name='authenticity_token' value='<%= form_authenticity_token %>'>
+            <textarea name='message[content]'></textarea>
+            <div>
+                <button class='btn btn-primary' type='submit'>Submit Comments</button>
+            </div>
+        </form>
+    </div>
+</div>

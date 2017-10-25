@@ -1,0 +1,9 @@
+
+
+
+<h2>Name: <%= @user.first_name %> <%= @user.last_name %></h2>
+<h4>Alias: <%= @user.alias %></h4>
+<p>Email: <%= @user.email %></p>
+<hr>
+<p>Total number of Posts: <%= @user.ideas.count %></p>
+<p>Total number of Likes: <%= @user.liked.count %></p>

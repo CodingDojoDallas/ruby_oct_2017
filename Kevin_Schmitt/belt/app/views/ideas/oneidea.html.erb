@@ -1,0 +1,23 @@
+<h3><%= @idea.user.first_name %> says: <div style='display:inline-block; border:2px solid black;width:40%;'><%= @idea.content %></div></h3>
+<div clas='row'></div>
+<hr>
+<div style='height:200px;'></div>
+<h4>People who liked this post:</h4>
+<table class='table'>
+    <thead>
+        <tr>
+            <th>Alias:</th>
+            <th>Name:</th>
+        </tr>
+    </thead>
+    <tbody>
+        <% @idea.liker.each do |liker| %>
+            <tr>
+                <td><a href='<%= showone_path liker.id %>'><%= liker.alias %></a></td>
+                <td><%= liker.first_name %> <%= liker.last_name %></td>
+            </tr>
+        <% end %>
+    </tbody>
+
+
+</table>

@@ -1,0 +1,113 @@
+<h1>Welcome, <%= current_user.first_name.capitalize %></h1>
+from <%= current_user.state %>
+<div class='row'>
+<table class='table'>
+    <thead>
+        <tr>
+            <th>Name:</th>
+            <th>State:</th>
+            <th>Date:</th>
+            <th>Action:</th>
+        </tr>
+    </thead>
+    <tbody>
+        <% @events.each do |event| %>
+            <% if current_user.state == event.state %>
+                <tr>
+                    <td><a href='<%= showone_path event.id %>'><%= event.name %></a></td>
+                    <td><%= event.state %></td>
+                    <td><%= event.date %></td>
+                    <% if current_user == event.user %>
+                        <td><a href='<%= destroy_event_path event.id %>' data-method='delete'>Cancel</a></td>
+                    <% else %>
+                        <% unless event.attendees.include? current_user %>
+                            <td><a href='<%= attend_path event.id %>' data-method='post'>Join</a></td>
+                        <% end %>
+                    <% end %>
+                    <% if event.attendees.include? current_user %>
+                        <% unless current_user == event.user %>
+                            <td><p>Already Joined</p><a href='<%= leave_path event.id %>' data-method='delete'>Leave</a></td>
+                        <% end %>
+                    <% end %>
+                </tr>
+            <% end %>
+        <% end %>
+    </tbody>
+</table>
+</div>
+
+<div class='row'>
+    <div class='col-md-2'></div>
+    <div class='col-md-8'>
+        <form class='form-group' action='<%= create_event_path %>' method='post'>
+            <input type='hidden' name='authenticity_token' value='<%= form_authenticity_token %>'>
+
+            <div class="form-group">
+                <%# <label for="exampleInputEmail1">Email address</label> %>
+                <input name='event[name]' type="name" id='name' class="form-control" placeholder="name">
+            </div>
+
+            <div class="form-group">
+                <%# <label for="exampleInputPassword1">Password</label> %>
+                <input name='event[date]' id='date' type="date" class="form-control">
+            </div>
+
+            <div class="form-group">
+                <%# <label for="exampleInputPassword1">Password</label> %>
+                <input name='event[city]' id='city' placeholder="city" type="city" class="form-control">
+            </div>
+
+            <div class="form-group">
+                <%# <label for="exampleInputPassword1">Password</label> %>
+                <input name='event[state]' id='state' placeholder="state" type="state" class="form-control">
+            </div>
+            <%# <div class="form-check">
+                <label class="form-check-label">
+                <input type="checkbox" class="form-check-input">
+                Check me out
+                </label>
+            </div> %>
+            <div>
+                <button type="submit" class="btn btn-primary">Create Event</button>
+            </div>
+        </form>
+    </div>
+    <div class='col-md-2'></div>
+</div>
+
+
+<div class='row'>
+<table class='table'>
+    <thead>
+        <tr>
+            <th>Name:</th>
+            <th>State:</th>
+            <th>Date:</th>
+            <th>Action:</th>
+        </tr>
+    </thead>
+    <tbody>
+        <% @events.each do |event| %>
+            <% unless current_user.state == event.state %>
+                <tr>
+                    <td><a href="<%= showone_path(event.id) %>"><%= event.name %></a></td>
+                    <td><%= event.state %></td>
+                    <td><%= event.date %></td>
+                    <% if current_user == event.user %>
+                        <td><a href='<%= destroy_event_path event.id %>' data-method='delete'>Cancel</a></td>
+                    <% else %>
+                        <% unless event.attendees.include? current_user %>
+                            <td><a href='<%= attend_path event.id %>' data-method='post'>Join</a></td>
+                        <% end %>
+                    <% end %>
+                    <% if event.attendees.include? current_user %>
+                        <% unless current_user == event.user %>
+                            <td><p>Already Joined</p><a href='<%= leave_path event.id %>' data-method='delete'>Leave</a></td>
+                        <% end %>
+                    <% end %>
+                </tr>
+            <% end %>
+        <% end %>
+    </tbody>
+</table>
+</div>
