@@ -1,0 +1,92 @@
+<div id="container">
+<div class="content">
+	<h1><%= @event.name %></h1>
+	<p>Host: <a href="<%= show_user_path @host.id %>"><%= @host.first_name %> <%= @host.last_name %></a></p>
+	<p>Date: <%= @event.date %></p>
+	<p>Location: <%= @location.city %>, <%= @location.state %></p>
+	<p>People joining the event: <%= @guests.count %></p>	
+	<% if not attending? @event and not hosting? @event%>
+		<form class="inline" action="<%= join_event_path @event.id%>" method="post">
+			<button class="blue">join</button>
+			<input name="authenticity_token" value="<%=form_authenticity_token %>" type="hidden"/>
+		</form>
+	<% elsif not hosting? @event%>
+		<form class="inline" action="<%=  cancel_event_path @event.id%>" method="post">
+			<button class="orange"> leave event </button>
+			<input name="authenticity_token" value="<%=form_authenticity_token %>" type="hidden"/>
+			<input type="hidden" name="_method" value="delete"/>
+		</form>
+	<% else %>
+		<form class="inline" action="<%= edit_event_path @event.id%>" method="get">
+			<button class="green">edit</button>
+			<input name="authenticity_token" value="<%=form_authenticity_token %>" type="hidden"/>
+		</form>
+		<form class="inline" action="<%= destroy_event_path @event.id%>" method="post">
+			<button class="red">delete</button>
+			<input name="authenticity_token" value="<%=form_authenticity_token %>" type="hidden"/>
+			<input type="hidden" name="_method" value="delete"/>
+		</form>
+	<% end %>
+	
+	
+	<table>
+		<thead>
+			<tr>
+				<td>Name</td>
+				<td>Location</td>
+				<td>State</td>
+			</tr>
+		</thead>
+		<tbody>
+			<% if @guests.any? %>
+				<% @guests.each do |guest| %>
+					<tr>
+						<td><a href="<%= show_user_path guest.id %>"><%= guest.first_name %> <%= guest.last_name %></a></td>
+						<td><%= guest.location.city.capitalize %></td>
+						<td><%= guest.location.state %></td>
+					</tr>
+				<% end %>
+				<% else %>
+				<td colspan="3">No one has joined this event</td>
+			<% end %>
+		</tbody>
+	</table>
+	
+	
+	
+</div>
+<div class="sidebar">
+	<h3>discusion about this event</h3>
+	<div class="scrollbox">
+		<% @comments.each do |comment| %>
+			<div>
+				<p>
+					<% if comment.user_id %>
+						<a href="<%= show_user_path comment.user.id %>"><%= comment.user.first_name %></a>
+					<% else %>
+						deleted_user
+					<% end %>
+					says: <%= comment.content %>
+				</p>
+				<hr/>
+			</div>
+		<% end %>
+	</div>
+	<form class="form" action="<%= create_comment_path @event.id %>" method="POST">
+	<input name="authenticity_token" value="<%=form_authenticity_token %>" type="hidden"/>
+		<label for="Comment">Add Comment: </label>
+		<textarea name="comment[content]" id="Comment" rows="3"></textarea>
+		<% if flash[:errors] %>
+			<% flash[:errors].each do |error| %>
+				<p class="errors"><%= error %></p>
+			<% end %>
+		<% end %>
+		
+		
+		<button class="right green">Submit Comment</button>
+	</form>
+</div>
+
+
+
+</div>

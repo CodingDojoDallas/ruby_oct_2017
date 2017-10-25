@@ -1,6 +1,6 @@
 <h1>Editing <%= @student.first_name %> <%= @student.last_name %></h1>
-<% if flash[:notice] %>
-		<% flash[:notice].each do |error| %>
+<% if flash[:errors] %>
+		<% flash[:errors].each do |error| %>
 			<li><%= error %></li>
 		<% end %>
 	<% end %>

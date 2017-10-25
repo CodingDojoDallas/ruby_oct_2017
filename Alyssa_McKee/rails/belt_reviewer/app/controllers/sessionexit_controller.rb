@@ -1,0 +1,2 @@
+class SessionexitController < ApplicationController
+end

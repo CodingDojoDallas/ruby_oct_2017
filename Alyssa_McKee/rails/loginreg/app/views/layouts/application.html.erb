@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Loginreg</title>
+		  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+<header>
+<h1>Welcome<% if current_user %> <%= current_user.first_name %><% end %>!</h1>
+<ul id="nav">
+	<% if not current_user %>
+		<li <% if current_page? login_path %>id="current"<%end%>><a href="<%= login_path %>">Login</a></li>
+		<li <% if current_page? register_path %>id="current"<%end%>><a href="<%= register_path %>">Register</a></li>
+	<% else %>
+		<li <% if current_page? dashboard_path %>id="current"<%end%>><a href="<%= dashboard_path %>">Dashboard</a></li>
+		<li <% if current_page? show_user_path current_user.id %>id="current"<%end%>><a href="<%= show_user_path current_user.id %>">Profile</a></li>
+		<li><a href="<%= logout_path %>" data-method="delete">Logout</a></li>
+	<% end %>
+	
+</ul>
+
+</header>
+
+<% if flash[:success] %>
+	<p class="success"><%= flash[:success] %></p>
+<% end %>
+<% if flash[:hacker] %>
+	<p class="error"><%= flash[:hacker] %></p>
+<% end %>
+
+<%= yield %>
+</body>
+</html>

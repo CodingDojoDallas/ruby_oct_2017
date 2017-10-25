@@ -1,0 +1,19 @@
+<h1>Login</h1>
+
+<form action="<%= sessions_path %>" method="POST">
+<input name="authenticity_token" value="<%=form_authenticity_token %>" type="hidden"/>
+
+<% if flash[:error] %>
+	<p><%= flash[:error] %></p>
+<% end %>
+
+<label for="Email">Email</label>
+<input type="text" name="session[email]" id="Email"/>
+
+<label for="Password">Password</label>
+<input type="password" name="session[password]" id="Password"/>
+
+<button type="submit">Login</button>
+</form>
+
+Or <a href="/users/new">Register Here</a>

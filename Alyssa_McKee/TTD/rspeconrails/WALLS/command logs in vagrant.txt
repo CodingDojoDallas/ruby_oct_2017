@@ -1,0 +1,1016 @@
+vagrant@vagrant-ubuntu-trusty-64:/vagrant/ruby_oct_2017/Alyssa_McKee/TTD/rspeconrails$ rails new WALLS -T
+      create
+      create  README.rdoc
+      create  Rakefile
+      create  config.ru
+      create  .gitignore
+      create  Gemfile
+      create  app
+      create  app/assets/javascripts/application.js
+      create  app/assets/stylesheets/application.css
+      create  app/controllers/application_controller.rb
+      create  app/helpers/application_helper.rb
+      create  app/views/layouts/application.html.erb
+      create  app/assets/images/.keep
+      create  app/mailers/.keep
+      create  app/models/.keep
+      create  app/controllers/concerns/.keep
+      create  app/models/concerns/.keep
+      create  bin
+      create  bin/bundle
+      create  bin/rails
+      create  bin/rake
+      create  bin/setup
+      create  config
+      create  config/routes.rb
+      create  config/application.rb
+      create  config/environment.rb
+      create  config/secrets.yml
+      create  config/environments
+      create  config/environments/development.rb
+      create  config/environments/production.rb
+      create  config/environments/test.rb
+      create  config/initializers
+      create  config/initializers/assets.rb
+      create  config/initializers/backtrace_silencers.rb
+      create  config/initializers/cookies_serializer.rb
+      create  config/initializers/filter_parameter_logging.rb
+      create  config/initializers/inflections.rb
+      create  config/initializers/mime_types.rb
+      create  config/initializers/session_store.rb
+      create  config/initializers/wrap_parameters.rb
+      create  config/locales
+      create  config/locales/en.yml
+      create  config/boot.rb
+      create  config/database.yml
+      create  db
+      create  db/seeds.rb
+      create  lib
+      create  lib/tasks
+      create  lib/tasks/.keep
+      create  lib/assets
+      create  lib/assets/.keep
+      create  log
+      create  log/.keep
+      create  public
+      create  public/404.html
+      create  public/422.html
+      create  public/500.html
+      create  public/favicon.ico
+      create  public/robots.txt
+      create  tmp/cache
+      create  tmp/cache/assets
+      create  vendor/assets/javascripts
+      create  vendor/assets/javascripts/.keep
+      create  vendor/assets/stylesheets
+      create  vendor/assets/stylesheets/.keep
+         run  bundle install
+The latest bundler is 1.16.0.pre.3, but you are currently running 1.15.4.
+To update, run `gem install bundler --pre`
+Fetching gem metadata from https://rubygems.org/..........
+Fetching version metadata from https://rubygems.org/..
+Fetching dependency metadata from https://rubygems.org/.
+Resolving dependencies................
+Using rake 12.1.0
+Using i18n 0.8.6
+Using json 1.8.6
+Using minitest 5.10.3
+Using thread_safe 0.3.6
+Using builder 3.2.3
+Using erubis 2.7.0
+Using mini_portile2 2.3.0
+Using crass 1.0.2
+Using rack 1.6.8
+Using mime-types-data 3.2016.0521
+Using arel 6.0.4
+Using debug_inspector 0.0.3
+Using bundler 1.15.4
+Using byebug 9.1.0
+Using coffee-script-source 1.12.2
+Using execjs 2.7.0
+Using thor 0.20.0
+Using concurrent-ruby 1.0.5
+Using ffi 1.9.18
+Using multi_json 1.12.2
+Using rb-fsevent 0.10.2
+Using rdoc 4.3.0
+Using tilt 2.0.8
+Using sqlite3 1.3.13
+Using turbolinks-source 5.0.3
+Using tzinfo 1.2.3
+Using nokogiri 1.8.1
+Using rack-test 0.6.3
+Using mime-types 3.1
+Using binding_of_caller 0.7.2
+Using coffee-script 2.4.1
+Using uglifier 3.2.0
+Using sprockets 3.7.1
+Using rb-inotify 0.9.10
+Using sdoc 0.4.2
+Using turbolinks 5.0.1
+Using activesupport 4.2.7
+Using loofah 2.1.1
+Using mail 2.6.6
+Using sass-listen 4.0.0
+Using rails-deprecated_sanitizer 1.0.3
+Using globalid 0.4.0
+Using activemodel 4.2.7
+Using jbuilder 2.7.0
+Using spring 2.0.2
+Using rails-html-sanitizer 1.0.3
+Using sass 3.5.2
+Using rails-dom-testing 1.0.8
+Using activejob 4.2.7
+Using activerecord 4.2.7
+Using actionview 4.2.7
+Using actionpack 4.2.7
+Using actionmailer 4.2.7
+Using railties 4.2.7
+Using sprockets-rails 3.2.1
+Using coffee-rails 4.1.1
+Using jquery-rails 4.3.1
+Using rails 4.2.7
+Using sass-rails 5.0.6
+Using web-console 2.3.0
+Bundle complete! 12 Gemfile dependencies, 61 gems now installed.
+Use `bundle info [gemname]` to see where a bundled gem is installed.
+         run  bundle exec spring binstub --all
+* bin/rake: spring inserted
+* bin/rails: spring inserted
+vagrant@vagrant-ubuntu-trusty-64:/vagrant/ruby_oct_2017/Alyssa_McKee/TTD/rspeconrails$ ls
+examples  WALLS
+vagrant@vagrant-ubuntu-trusty-64:/vagrant/ruby_oct_2017/Alyssa_McKee/TTD/rspeconrails$ cd WALLS
+vagrant@vagrant-ubuntu-trusty-64:/vagrant/ruby_oct_2017/Alyssa_McKee/TTD/rspeconrails/WALLS$ ls
+app  config     db       Gemfile.lock  log     Rakefile     tmp
+bin  config.ru  Gemfile  lib           public  README.rdoc  vendor
+vagrant@vagrant-ubuntu-trusty-64:/vagrant/ruby_oct_2017/Alyssa_McKee/TTD/rspeconrails/WALLS$ bundle insta
+ll
+The latest bundler is 1.16.0.pre.3, but you are currently running 1.15.4.
+To update, run `gem install bundler --pre`
+Resolving dependencies...
+Using rake 12.1.0
+Using i18n 0.8.6
+Using json 1.8.6
+Using minitest 5.10.3
+Using thread_safe 0.3.6
+Using builder 3.2.3
+Using erubis 2.7.0
+Using mini_portile2 2.3.0
+Using crass 1.0.2
+Using rack 1.6.8
+Using mime-types-data 3.2016.0521
+Using arel 6.0.4
+Using public_suffix 3.0.0
+Using debug_inspector 0.0.3
+Using bundler 1.15.4
+Using byebug 9.1.0
+Using mini_mime 0.1.4
+Using coffee-script-source 1.12.2
+Using execjs 2.7.0
+Using thor 0.20.0
+Using concurrent-ruby 1.0.5
+Using diff-lcs 1.3
+Using ffi 1.9.18
+Using multi_json 1.12.2
+Using rb-fsevent 0.10.2
+Using rdoc 4.3.0
+Using rspec-support 3.6.0
+Using tilt 2.0.8
+Using sqlite3 1.3.13
+Using turbolinks-source 5.0.3
+Using tzinfo 1.2.3
+Using nokogiri 1.8.1
+Using rack-test 0.6.3
+Using mime-types 3.1
+Using addressable 2.5.2
+Using binding_of_caller 0.7.2
+Using coffee-script 2.4.1
+Using uglifier 3.2.0
+Using sprockets 3.7.1
+Using rb-inotify 0.9.10
+Using sdoc 0.4.2
+Using rspec-core 3.6.0
+Using rspec-expectations 3.6.0
+Using rspec-mocks 3.6.0
+Using turbolinks 5.0.1
+Using activesupport 4.2.7
+Using loofah 2.1.1
+Using xpath 2.1.0
+Using mail 2.6.6
+Using sass-listen 4.0.0
+Using rails-deprecated_sanitizer 1.0.3
+Using globalid 0.4.0
+Using activemodel 4.2.7
+Using factory_girl 4.8.1
+Using jbuilder 2.7.0
+Using spring 2.0.2
+Using rails-html-sanitizer 1.0.3
+Using capybara 2.15.4
+Using sass 3.5.2
+Using rails-dom-testing 1.0.8
+Using activejob 4.2.7
+Using activerecord 4.2.7
+Using actionview 4.2.7
+Using actionpack 4.2.7
+Using actionmailer 4.2.7
+Using railties 4.2.7
+Using sprockets-rails 3.2.1
+Using coffee-rails 4.1.1
+Using factory_girl_rails 4.8.0
+Using jquery-rails 4.3.1
+Using rspec-rails 3.6.1
+Using rails 4.2.7
+Using sass-rails 5.0.6
+Using web-console 2.3.0
+Bundle complete! 15 Gemfile dependencies, 74 gems now installed.
+Use `bundle info [gemname]` to see where a bundled gem is installed.
+vagrant@vagrant-ubuntu-trusty-64:/vagrant/ruby_oct_2017/Alyssa_McKee/TTD/rspeconrails/WALLS$ rails g rspe
+c:install
+Running via Spring preloader in process 5238
+      create  .rspec
+      create  spec
+      create  spec/spec_helper.rb
+      create  spec/rails_helper.rb
+vagrant@vagrant-ubuntu-trusty-64:/vagrant/ruby_oct_2017/Alyssa_McKee/TTD/rspeconrails/WALLS$ rails g Mode
+l name:string level:integer
+Running via Spring preloader in process 5396
+Could not find generator 'Model'. Maybe you meant 'model', 'job' or 'assets'
+Run `rails generate --help` for more options.
+vagrant@vagrant-ubuntu-trusty-64:/vagrant/ruby_oct_2017/Alyssa_McKee/TTD/rspeconrails/WALLS$ rails g Mode
+l Wall name:string level:integer
+Running via Spring preloader in process 5407
+Could not find generator 'Model'. Maybe you meant 'model', 'job' or 'assets'
+Run `rails generate --help` for more options.
+vagrant@vagrant-ubuntu-trusty-64:/vagrant/ruby_oct_2017/Alyssa_McKee/TTD/rspeconrails/WALLS$ rails g mode
+l Wall name:string level:integer
+Running via Spring preloader in process 5415
+      invoke  active_record
+      create    db/migrate/20171012221938_create_walls.rb
+      create    app/models/wall.rb
+      invoke    rspec
+      create      spec/models/wall_spec.rb
+      invoke      factory_girl
+      create        spec/factories/walls.rb
+vagrant@vagrant-ubuntu-trusty-64:/vagrant/ruby_oct_2017/Alyssa_McKee/TTD/rspeconrails/WALLS$ rails g User
+ username:string iconname:string
+Running via Spring preloader in process 5426
+rails g model Could not find generator 'User'. Maybe you meant 'assets', 'helper' or 'job'
+Run `rails generate --help` for more options.
+vagrant@vagrant-ubuntu-trusty-64:/vagrant/ruby_oct_2017/Alyssa_McKee/TTD/rspeconrails/WALLS$ rails g mode
+l Message content:string user:references wall:references
+Running via Spring preloader in process 5438
+      invoke  active_record
+      create    db/migrate/20171012222417_create_messages.rb
+      create    app/models/message.rb
+      invoke    rspec
+      create      spec/models/message_spec.rb
+      invoke      factory_girl
+      create        spec/factories/messages.rb
+vagrant@vagrant-ubuntu-trusty-64:/vagrant/ruby_oct_2017/Alyssa_McKee/TTD/rspeconrails/WALLS$ rails g mode
+l Comment content:text messege:references user:references
+Running via Spring preloader in process 5450
+      invoke  active_record
+      create    db/migrate/20171012222649_create_comments.rb
+      create    app/models/comment.rb
+      invoke    rspec
+      create      spec/models/comment_spec.rb
+      invoke      factory_girl
+      create        spec/factories/comments.rb
+vagrant@vagrant-ubuntu-trusty-64:/vagrant/ruby_oct_2017/Alyssa_McKee/TTD/rspeconrails/WALLS$ rails g mode
+l User username:string iconname:string
+Running via Spring preloader in process 5459
+      invoke  active_record
+      create    db/migrate/20171012222712_create_users.rb
+      create    app/models/user.rb
+      invoke    rspec
+      create      spec/models/user_spec.rb
+      invoke      factory_girl
+      create        spec/factories/users.rb
+vagrant@vagrant-ubuntu-trusty-64:/vagrant/ruby_oct_2017/Alyssa_McKee/TTD/rspeconrails/WALLS$ bundle insta
+ll
+The latest bundler is 1.16.0.pre.3, but you are currently running 1.15.4.
+To update, run `gem install bundler --pre`
+Using rake 12.1.0
+Using i18n 0.8.6
+Using json 1.8.6
+Using minitest 5.10.3
+Using thread_safe 0.3.6
+Using builder 3.2.3
+Using erubis 2.7.0
+Using mini_portile2 2.3.0
+Using crass 1.0.2
+Using rack 1.6.8
+Using mime-types-data 3.2016.0521
+Using arel 6.0.4
+Using public_suffix 3.0.0
+Using debug_inspector 0.0.3
+Using bundler 1.15.4
+Using byebug 9.1.0
+Using mini_mime 0.1.4
+Using coffee-script-source 1.12.2
+Using execjs 2.7.0
+Using thor 0.20.0
+Using concurrent-ruby 1.0.5
+Using diff-lcs 1.3
+Using ffi 1.9.18
+Using hirb 0.7.3
+Using multi_json 1.12.2
+Using rb-fsevent 0.10.2
+Using rdoc 4.3.0
+Using rspec-support 3.6.0
+Using tilt 2.0.8
+Using sqlite3 1.3.13
+Using turbolinks-source 5.0.3
+Using tzinfo 1.2.3
+Using nokogiri 1.8.1
+Using rack-test 0.6.3
+Using mime-types 3.1
+Using addressable 2.5.2
+Using binding_of_caller 0.7.2
+Using coffee-script 2.4.1
+Using uglifier 3.2.0
+Using sprockets 3.7.1
+Using rb-inotify 0.9.10
+Using sdoc 0.4.2
+Using rspec-core 3.6.0
+Using rspec-expectations 3.6.0
+Using rspec-mocks 3.6.0
+Using turbolinks 5.0.1
+Using activesupport 4.2.7
+Using loofah 2.1.1
+Using xpath 2.1.0
+Using mail 2.6.6
+Using sass-listen 4.0.0
+Using rails-deprecated_sanitizer 1.0.3
+Using globalid 0.4.0
+Using activemodel 4.2.7
+Using factory_girl 4.8.1
+Using jbuilder 2.7.0
+Using spring 2.0.2
+Using rails-html-sanitizer 1.0.3
+Using capybara 2.15.4
+Using sass 3.5.2
+Using rails-dom-testing 1.0.8
+Using activejob 4.2.7
+Using activerecord 4.2.7
+Using actionview 4.2.7
+Using actionpack 4.2.7
+Using actionmailer 4.2.7
+Using railties 4.2.7
+Using sprockets-rails 3.2.1
+Using coffee-rails 4.1.1
+Using factory_girl_rails 4.8.0
+Using jquery-rails 4.3.1
+Using rspec-rails 3.6.1
+Using rails 4.2.7
+Using sass-rails 5.0.6
+Using web-console 2.3.0
+Bundle complete! 16 Gemfile dependencies, 75 gems now installed.
+Use `bundle info [gemname]` to see where a bundled gem is installed.
+vagrant@vagrant-ubuntu-trusty-64:/vagrant/ruby_oct_2017/Alyssa_McKee/TTD/rspeconrails/WALLS$ rake db:migr
+ate
+== 20171012221938 CreateWalls: migrating ======================================
+-- create_table(:walls)
+   -> 0.0232s
+== 20171012221938 CreateWalls: migrated (0.0237s) =============================
+
+== 20171012222417 CreateMessages: migrating ===================================
+-- create_table(:messages)
+   -> 0.0522s
+== 20171012222417 CreateMessages: migrated (0.0562s) ==========================
+
+== 20171012222649 CreateComments: migrating ===================================
+-- create_table(:comments)
+   -> 0.0824s
+== 20171012222649 CreateComments: migrated (0.0854s) ==========================
+
+== 20171012222712 CreateUsers: migrating ======================================
+-- create_table(:users)
+   -> 0.0181s
+== 20171012222712 CreateUsers: migrated (0.0212s) =============================
+
+vagrant@vagrant-ubuntu-trusty-64:/vagrant/ruby_oct_2017/Alyssa_McKee/TTD/rspeconrails/WALLS$ gem list
+
+*** LOCAL GEMS ***
+
+actionmailer (4.2.7)
+actionpack (4.2.7)
+actionview (4.2.7)
+activejob (4.2.7)
+activemodel (4.2.7)
+activerecord (4.2.7)
+activesupport (4.2.7)
+addressable (2.5.2)
+arel (6.0.4)
+bigdecimal (1.2.8)
+binding_of_caller (0.7.2)
+builder (3.2.3)
+bundler (1.15.4)
+bundler-unload (1.0.2)
+byebug (9.1.0)
+capybara (2.15.4)
+coffee-rails (4.1.1)
+coffee-script (2.4.1)
+coffee-script-source (1.12.2)
+concurrent-ruby (1.0.5)
+crass (1.0.2)
+debug_inspector (0.0.3)
+did_you_mean (1.0.0)
+diff-lcs (1.3)
+erubis (2.7.0)
+execjs (2.7.0)
+executable-hooks (1.3.2)
+factory_girl (4.8.1)
+factory_girl_rails (4.8.0)
+faker (1.8.4)
+ffi (1.9.18)
+gem-wrappers (1.3.2, 1.2.7)
+globalid (0.4.0)
+hirb (0.7.3)
+i18n (0.8.6)
+io-console (0.4.5)
+jbuilder (2.7.0)
+jquery-rails (4.3.1)
+json (1.8.6, 1.8.3)
+loofah (2.1.1)
+mail (2.6.6)
+mime-types (3.1)
+mime-types-data (3.2016.0521)
+mini_mime (0.1.4)
+mini_portile2 (2.3.0)
+minitest (5.10.3, 5.8.3)
+multi_json (1.12.2)
+net-telnet (0.1.1)
+nokogiri (1.8.1)
+power_assert (0.2.6)
+psych (2.0.17)
+public_suffix (3.0.0)
+rack (1.6.8)
+rack-test (0.6.3)
+rails (4.2.7)
+rails-deprecated_sanitizer (1.0.3)
+rails-dom-testing (1.0.8)
+rails-footnotes (4.1.8)
+rails-html-sanitizer (1.0.3)
+railties (4.2.7)
+rake (12.1.0, 10.4.2)
+rb-fsevent (0.10.2)
+rb-inotify (0.9.10)
+rdoc (4.3.0, 4.2.1)
+rspec (3.6.0)
+rspec-core (3.6.0)
+rspec-expectations (3.6.0)
+rspec-mocks (3.6.0)
+rspec-rails (3.6.1)
+rspec-support (3.6.0)
+rubygems-bundler (1.4.4)
+rvm (1.11.3.9)
+sass (3.5.2, 3.5.1)
+sass-listen (4.0.0)
+sass-rails (5.0.6)
+sdoc (0.4.2)
+spring (2.0.2)
+sprockets (3.7.1)
+sprockets-rails (3.2.1)
+sqlite3 (1.3.13)
+test-unit (3.1.5)
+thor (0.20.0)
+thread_safe (0.3.6)
+tilt (2.0.8)
+turbolinks (5.0.1)
+turbolinks-source (5.0.3)
+tzinfo (1.2.3)
+uglifier (3.2.0)
+web-console (2.3.0)
+xpath (2.1.0)
+vagrant@vagrant-ubuntu-trusty-64:/vagrant/ruby_oct_2017/Alyssa_McKee/TTD/rspeconrails/WALLS$ rspec spec
+
+An error occurred while loading ./spec/models/comment_spec.rb.
+Failure/Error: require File.expand_path('../../config/environment', __FILE__)
+
+SyntaxError:
+  /vagrant/ruby_oct_2017/Alyssa_McKee/TTD/rspeconrails/WALLS/config/routes.rb:15: syntax error, unexpected
+ tIDENTIFIER, expecting keyword_end
+  ...ssages' => 'messeges#create' as: 'create_message' #create me...
+  ...                               ^
+  /vagrant/ruby_oct_2017/Alyssa_McKee/TTD/rspeconrails/WALLS/config/routes.rb:17: syntax error, unexpected
+ tIDENTIFIER, expecting keyword_end
+  get 'walls/:name' => 'walls#index' as: 'wall' #show all for that wall
+                                       ^
+# /home/vagrant/.rvm/gems/ruby-2.3.1/gems/activesupport-4.2.7/lib/active_support/dependencies.rb:268:in `l
+oad'
+# /home/vagrant/.rvm/gems/ruby-2.3.1/gems/activesupport-4.2.7/lib/active_support/dependencies.rb:268:in `b
+lock in load'
+# /home/vagrant/.rvm/gems/ruby-2.3.1/gems/activesupport-4.2.7/lib/active_support/dependencies.rb:240:in `l
+oad_dependency'
+# /home/vagrant/.rvm/gems/ruby-2.3.1/gems/activesupport-4.2.7/lib/active_support/dependencies.rb:268:in `l
+oad'
+# /home/vagrant/.rvm/gems/ruby-2.3.1/gems/railties-4.2.7/lib/rails/application/routes_reloader.rb:40:in `b
+lock in load_paths'
+# /home/vagrant/.rvm/gems/ruby-2.3.1/gems/railties-4.2.7/lib/rails/application/routes_reloader.rb:40:in `e
+ach'
+# /home/vagrant/.rvm/gems/ruby-2.3.1/gems/railties-4.2.7/lib/rails/application/routes_reloader.rb:40:in `l
+oad_paths'
+# /home/vagrant/.rvm/gems/ruby-2.3.1/gems/railties-4.2.7/lib/rails/application/routes_reloader.rb:16:in `r
+eload!'
+# /home/vagrant/.rvm/gems/ruby-2.3.1/gems/railties-4.2.7/lib/rails/application/routes_reloader.rb:26:in `b
+lock in updater'
+# /home/vagrant/.rvm/gems/ruby-2.3.1/gems/activesupport-4.2.7/lib/active_support/file_update_checker.rb:75
+:in `execute'
+# /home/vagrant/.rvm/gems/ruby-2.3.1/gems/railties-4.2.7/lib/rails/application/routes_reloader.rb:27:in `u
+pdater'
+# /home/vagrant/.rvm/gems/ruby-2.3.1/gems/railties-4.2.7/lib/rails/application/routes_reloader.rb:7:in `ex
+ecute_if_updated'
+# /home/vagrant/.rvm/gems/ruby-2.3.1/gems/railties-4.2.7/lib/rails/application/finisher.rb:69:in `block in
+ <module:Finisher>'
+# /home/vagrant/.rvm/gems/ruby-2.3.1/gems/railties-4.2.7/lib/rails/initializable.rb:30:in `instance_exec'
+# /home/vagrant/.rvm/gems/ruby-2.3.1/gems/railties-4.2.7/lib/rails/initializable.rb:30:in `run'
+# /home/vagrant/.rvm/gems/ruby-2.3.1/gems/railties-4.2.7/lib/rails/initializable.rb:55:in `block in run_in
+itializers'
+# /home/vagrant/.rvm/gems/ruby-2.3.1/gems/railties-4.2.7/lib/rails/initializable.rb:54:in `run_initializer
+s'
+# /home/vagrant/.rvm/gems/ruby-2.3.1/gems/railties-4.2.7/lib/rails/application.rb:352:in `initialize!'
+# ./config/environment.rb:5:in `<top (required)>'
+# ./spec/rails_helper.rb:4:in `require'
+# ./spec/rails_helper.rb:4:in `<top (required)>'
+# ./spec/models/comment_spec.rb:1:in `require'
+# ./spec/models/comment_spec.rb:1:in `<top (required)>'
+
+An error occurred while loading ./spec/models/message_spec.rb.
+Failure/Error: require File.expand_path('../../config/environment', __FILE__)
+
+RuntimeError:
+  can't modify frozen Array
+# /home/vagrant/.rvm/gems/ruby-2.3.1/gems/railties-4.2.7/lib/rails/engine.rb:577:in `unshift'
+# /home/vagrant/.rvm/gems/ruby-2.3.1/gems/railties-4.2.7/lib/rails/engine.rb:577:in `block in <class:Engin
+e>'
+# /home/vagrant/.rvm/gems/ruby-2.3.1/gems/railties-4.2.7/lib/rails/initializable.rb:30:in `instance_exec'
+# /home/vagrant/.rvm/gems/ruby-2.3.1/gems/railties-4.2.7/lib/rails/initializable.rb:30:in `run'
+# /home/vagrant/.rvm/gems/ruby-2.3.1/gems/railties-4.2.7/lib/rails/initializable.rb:55:in `block in run_in
+itializers'
+# /home/vagrant/.rvm/gems/ruby-2.3.1/gems/railties-4.2.7/lib/rails/initializable.rb:44:in `each'
+# /home/vagrant/.rvm/gems/ruby-2.3.1/gems/railties-4.2.7/lib/rails/initializable.rb:44:in `tsort_each_chil
+d'
+# /home/vagrant/.rvm/gems/ruby-2.3.1/gems/railties-4.2.7/lib/rails/initializable.rb:44:in `each'
+# /home/vagrant/.rvm/gems/ruby-2.3.1/gems/railties-4.2.7/lib/rails/initializable.rb:44:in `tsort_each_chil
+d'
+# /home/vagrant/.rvm/gems/ruby-2.3.1/gems/railties-4.2.7/lib/rails/initializable.rb:44:in `each'
+# /home/vagrant/.rvm/gems/ruby-2.3.1/gems/railties-4.2.7/lib/rails/initializable.rb:44:in `tsort_each_chil
+d'
+# /home/vagrant/.rvm/gems/ruby-2.3.1/gems/railties-4.2.7/lib/rails/initializable.rb:44:in `each'
+# /home/vagrant/.rvm/gems/ruby-2.3.1/gems/railties-4.2.7/lib/rails/initializable.rb:44:in `tsort_each_chil
+d'
+# /home/vagrant/.rvm/gems/ruby-2.3.1/gems/railties-4.2.7/lib/rails/initializable.rb:54:in `run_initializer
+s'
+# /home/vagrant/.rvm/gems/ruby-2.3.1/gems/railties-4.2.7/lib/rails/application.rb:352:in `initialize!'
+# ./config/environment.rb:5:in `<top (required)>'
+# /home/vagrant/.rvm/gems/ruby-2.3.1/gems/activesupport-4.2.7/lib/active_support/dependencies.rb:274:in `r
+equire'
+# /home/vagrant/.rvm/gems/ruby-2.3.1/gems/activesupport-4.2.7/lib/active_support/dependencies.rb:274:in `b
+lock in require'
+# /home/vagrant/.rvm/gems/ruby-2.3.1/gems/activesupport-4.2.7/lib/active_support/dependencies.rb:240:in `l
+oad_dependency'
+# /home/vagrant/.rvm/gems/ruby-2.3.1/gems/activesupport-4.2.7/lib/active_support/dependencies.rb:274:in `r
+equire'
+# ./spec/rails_helper.rb:4:in `<top (required)>'
+# /home/vagrant/.rvm/gems/ruby-2.3.1/gems/activesupport-4.2.7/lib/active_support/dependencies.rb:274:in `r
+equire'
+# /home/vagrant/.rvm/gems/ruby-2.3.1/gems/activesupport-4.2.7/lib/active_support/dependencies.rb:274:in `b
+lock in require'
+# /home/vagrant/.rvm/gems/ruby-2.3.1/gems/activesupport-4.2.7/lib/active_support/dependencies.rb:240:in `l
+oad_dependency'
+# /home/vagrant/.rvm/gems/ruby-2.3.1/gems/activesupport-4.2.7/lib/active_support/dependencies.rb:274:in `r
+equire'
+# ./spec/models/message_spec.rb:1:in `<top (required)>'
+# /home/vagrant/.rvm/gems/ruby-2.3.1/gems/activesupport-4.2.7/lib/active_support/dependencies.rb:268:in `l
+oad'
+# /home/vagrant/.rvm/gems/ruby-2.3.1/gems/activesupport-4.2.7/lib/active_support/dependencies.rb:268:in `b
+lock in load'
+# /home/vagrant/.rvm/gems/ruby-2.3.1/gems/activesupport-4.2.7/lib/active_support/dependencies.rb:240:in `l
+oad_dependency'
+# /home/vagrant/.rvm/gems/ruby-2.3.1/gems/activesupport-4.2.7/lib/active_support/dependencies.rb:268:in `l
+oad'
+
+An error occurred while loading ./spec/models/user_spec.rb.
+Failure/Error: load_dependency(file) { result = super }
+
+SyntaxError:
+  /vagrant/ruby_oct_2017/Alyssa_McKee/TTD/rspeconrails/WALLS/spec/models/user_spec.rb:28: syntax error, un
+expected keyword_end, expecting end-of-input
+    end #end registration
+       ^
+# /home/vagrant/.rvm/gems/ruby-2.3.1/gems/activesupport-4.2.7/lib/active_support/dependencies.rb:268:in `l
+oad'
+# /home/vagrant/.rvm/gems/ruby-2.3.1/gems/activesupport-4.2.7/lib/active_support/dependencies.rb:268:in `b
+lock in load'
+# /home/vagrant/.rvm/gems/ruby-2.3.1/gems/activesupport-4.2.7/lib/active_support/dependencies.rb:240:in `l
+oad_dependency'
+# /home/vagrant/.rvm/gems/ruby-2.3.1/gems/activesupport-4.2.7/lib/active_support/dependencies.rb:268:in `l
+oad'
+
+An error occurred while loading ./spec/models/wall_spec.rb.
+Failure/Error: require File.expand_path('../../config/environment', __FILE__)
+
+RuntimeError:
+  can't modify frozen Array
+# /home/vagrant/.rvm/gems/ruby-2.3.1/gems/railties-4.2.7/lib/rails/engine.rb:577:in `unshift'
+# /home/vagrant/.rvm/gems/ruby-2.3.1/gems/railties-4.2.7/lib/rails/engine.rb:577:in `block in <class:Engin
+e>'
+# /home/vagrant/.rvm/gems/ruby-2.3.1/gems/railties-4.2.7/lib/rails/initializable.rb:30:in `instance_exec'
+# /home/vagrant/.rvm/gems/ruby-2.3.1/gems/railties-4.2.7/lib/rails/initializable.rb:30:in `run'
+# /home/vagrant/.rvm/gems/ruby-2.3.1/gems/railties-4.2.7/lib/rails/initializable.rb:55:in `block in run_in
+itializers'
+# /home/vagrant/.rvm/gems/ruby-2.3.1/gems/railties-4.2.7/lib/rails/initializable.rb:44:in `each'
+# /home/vagrant/.rvm/gems/ruby-2.3.1/gems/railties-4.2.7/lib/rails/initializable.rb:44:in `tsort_each_chil
+d'
+# /home/vagrant/.rvm/gems/ruby-2.3.1/gems/railties-4.2.7/lib/rails/initializable.rb:44:in `each'
+# /home/vagrant/.rvm/gems/ruby-2.3.1/gems/railties-4.2.7/lib/rails/initializable.rb:44:in `tsort_each_chil
+d'
+# /home/vagrant/.rvm/gems/ruby-2.3.1/gems/railties-4.2.7/lib/rails/initializable.rb:44:in `each'
+# /home/vagrant/.rvm/gems/ruby-2.3.1/gems/railties-4.2.7/lib/rails/initializable.rb:44:in `tsort_each_chil
+d'
+# /home/vagrant/.rvm/gems/ruby-2.3.1/gems/railties-4.2.7/lib/rails/initializable.rb:44:in `each'
+# /home/vagrant/.rvm/gems/ruby-2.3.1/gems/railties-4.2.7/lib/rails/initializable.rb:44:in `tsort_each_chil
+d'
+# /home/vagrant/.rvm/gems/ruby-2.3.1/gems/railties-4.2.7/lib/rails/initializable.rb:54:in `run_initializer
+s'
+# /home/vagrant/.rvm/gems/ruby-2.3.1/gems/railties-4.2.7/lib/rails/application.rb:352:in `initialize!'
+# ./config/environment.rb:5:in `<top (required)>'
+# /home/vagrant/.rvm/gems/ruby-2.3.1/gems/activesupport-4.2.7/lib/active_support/dependencies.rb:274:in `r
+equire'
+# /home/vagrant/.rvm/gems/ruby-2.3.1/gems/activesupport-4.2.7/lib/active_support/dependencies.rb:274:in `b
+lock in require'
+# /home/vagrant/.rvm/gems/ruby-2.3.1/gems/activesupport-4.2.7/lib/active_support/dependencies.rb:240:in `l
+oad_dependency'
+# /home/vagrant/.rvm/gems/ruby-2.3.1/gems/activesupport-4.2.7/lib/active_support/dependencies.rb:274:in `r
+equire'
+# ./spec/rails_helper.rb:4:in `<top (required)>'
+# /home/vagrant/.rvm/gems/ruby-2.3.1/gems/activesupport-4.2.7/lib/active_support/dependencies.rb:274:in `r
+equire'
+# /home/vagrant/.rvm/gems/ruby-2.3.1/gems/activesupport-4.2.7/lib/active_support/dependencies.rb:274:in `b
+lock in require'
+# /home/vagrant/.rvm/gems/ruby-2.3.1/gems/activesupport-4.2.7/lib/active_support/dependencies.rb:240:in `l
+oad_dependency'
+# /home/vagrant/.rvm/gems/ruby-2.3.1/gems/activesupport-4.2.7/lib/active_support/dependencies.rb:274:in `r
+equire'
+# ./spec/models/wall_spec.rb:1:in `<top (required)>'
+# /home/vagrant/.rvm/gems/ruby-2.3.1/gems/activesupport-4.2.7/lib/active_support/dependencies.rb:268:in `l
+oad'
+# /home/vagrant/.rvm/gems/ruby-2.3.1/gems/activesupport-4.2.7/lib/active_support/dependencies.rb:268:in `b
+lock in load'
+# /home/vagrant/.rvm/gems/ruby-2.3.1/gems/activesupport-4.2.7/lib/active_support/dependencies.rb:240:in `l
+oad_dependency'
+# /home/vagrant/.rvm/gems/ruby-2.3.1/gems/activesupport-4.2.7/lib/active_support/dependencies.rb:268:in `l
+oad'
+No examples found.
+
+
+Finished in 0.00118 seconds (files took 34.78 seconds to load)
+0 examples, 0 failures, 4 errors occurred outside of examples
+
+vagrant@vagrant-ubuntu-trusty-64:/vagrant/ruby_oct_2017/Alyssa_McKee/TTD/rspeconrails/WALLS$ rspec spec
+
+An error occurred while loading ./spec/models/comment_spec.rb.
+Failure/Error: require File.expand_path('../../config/environment', __FILE__)
+
+SyntaxError:
+  /vagrant/ruby_oct_2017/Alyssa_McKee/TTD/rspeconrails/WALLS/config/routes.rb:15: syntax error, unexpected
+ tIDENTIFIER, expecting keyword_end
+  ...ssages' => 'messeges#create' as: 'create_message' #create me...
+  ...                               ^
+  /vagrant/ruby_oct_2017/Alyssa_McKee/TTD/rspeconrails/WALLS/config/routes.rb:17: syntax error, unexpected
+ tIDENTIFIER, expecting keyword_end
+  get 'walls/:name' => 'walls#index' as: 'wall' #show all for that wall
+                                       ^
+# /home/vagrant/.rvm/gems/ruby-2.3.1/gems/activesupport-4.2.7/lib/active_support/dependencies.rb:268:in `l
+oad'
+# /home/vagrant/.rvm/gems/ruby-2.3.1/gems/activesupport-4.2.7/lib/active_support/dependencies.rb:268:in `b
+lock in load'
+# /home/vagrant/.rvm/gems/ruby-2.3.1/gems/activesupport-4.2.7/lib/active_support/dependencies.rb:240:in `l
+oad_dependency'
+# /home/vagrant/.rvm/gems/ruby-2.3.1/gems/activesupport-4.2.7/lib/active_support/dependencies.rb:268:in `l
+oad'
+# /home/vagrant/.rvm/gems/ruby-2.3.1/gems/railties-4.2.7/lib/rails/application/routes_reloader.rb:40:in `b
+lock in load_paths'
+# /home/vagrant/.rvm/gems/ruby-2.3.1/gems/railties-4.2.7/lib/rails/application/routes_reloader.rb:40:in `e
+ach'
+# /home/vagrant/.rvm/gems/ruby-2.3.1/gems/railties-4.2.7/lib/rails/application/routes_reloader.rb:40:in `l
+oad_paths'
+# /home/vagrant/.rvm/gems/ruby-2.3.1/gems/railties-4.2.7/lib/rails/application/routes_reloader.rb:16:in `r
+eload!'
+# /home/vagrant/.rvm/gems/ruby-2.3.1/gems/railties-4.2.7/lib/rails/application/routes_reloader.rb:26:in `b
+lock in updater'
+# /home/vagrant/.rvm/gems/ruby-2.3.1/gems/activesupport-4.2.7/lib/active_support/file_update_checker.rb:75
+:in `execute'
+# /home/vagrant/.rvm/gems/ruby-2.3.1/gems/railties-4.2.7/lib/rails/application/routes_reloader.rb:27:in `u
+pdater'
+# /home/vagrant/.rvm/gems/ruby-2.3.1/gems/railties-4.2.7/lib/rails/application/routes_reloader.rb:7:in `ex
+ecute_if_updated'
+# /home/vagrant/.rvm/gems/ruby-2.3.1/gems/railties-4.2.7/lib/rails/application/finisher.rb:69:in `block in
+ <module:Finisher>'
+# /home/vagrant/.rvm/gems/ruby-2.3.1/gems/railties-4.2.7/lib/rails/initializable.rb:30:in `instance_exec'
+# /home/vagrant/.rvm/gems/ruby-2.3.1/gems/railties-4.2.7/lib/rails/initializable.rb:30:in `run'
+# /home/vagrant/.rvm/gems/ruby-2.3.1/gems/railties-4.2.7/lib/rails/initializable.rb:55:in `block in run_in
+itializers'
+# /home/vagrant/.rvm/gems/ruby-2.3.1/gems/railties-4.2.7/lib/rails/initializable.rb:54:in `run_initializer
+s'
+# /home/vagrant/.rvm/gems/ruby-2.3.1/gems/railties-4.2.7/lib/rails/application.rb:352:in `initialize!'
+# ./config/environment.rb:5:in `<top (required)>'
+# ./spec/rails_helper.rb:4:in `require'
+# ./spec/rails_helper.rb:4:in `<top (required)>'
+# ./spec/models/comment_spec.rb:1:in `require'
+# ./spec/models/comment_spec.rb:1:in `<top (required)>'
+
+An error occurred while loading ./spec/models/message_spec.rb.
+Failure/Error: require File.expand_path('../../config/environment', __FILE__)
+
+RuntimeError:
+  can't modify frozen Array
+# /home/vagrant/.rvm/gems/ruby-2.3.1/gems/railties-4.2.7/lib/rails/engine.rb:577:in `unshift'
+# /home/vagrant/.rvm/gems/ruby-2.3.1/gems/railties-4.2.7/lib/rails/engine.rb:577:in `block in <class:Engin
+e>'
+# /home/vagrant/.rvm/gems/ruby-2.3.1/gems/railties-4.2.7/lib/rails/initializable.rb:30:in `instance_exec'
+# /home/vagrant/.rvm/gems/ruby-2.3.1/gems/railties-4.2.7/lib/rails/initializable.rb:30:in `run'
+# /home/vagrant/.rvm/gems/ruby-2.3.1/gems/railties-4.2.7/lib/rails/initializable.rb:55:in `block in run_in
+itializers'
+# /home/vagrant/.rvm/gems/ruby-2.3.1/gems/railties-4.2.7/lib/rails/initializable.rb:44:in `each'
+# /home/vagrant/.rvm/gems/ruby-2.3.1/gems/railties-4.2.7/lib/rails/initializable.rb:44:in `tsort_each_chil
+d'
+# /home/vagrant/.rvm/gems/ruby-2.3.1/gems/railties-4.2.7/lib/rails/initializable.rb:44:in `each'
+# /home/vagrant/.rvm/gems/ruby-2.3.1/gems/railties-4.2.7/lib/rails/initializable.rb:44:in `tsort_each_chil
+d'
+# /home/vagrant/.rvm/gems/ruby-2.3.1/gems/railties-4.2.7/lib/rails/initializable.rb:44:in `each'
+# /home/vagrant/.rvm/gems/ruby-2.3.1/gems/railties-4.2.7/lib/rails/initializable.rb:44:in `tsort_each_chil
+d'
+# /home/vagrant/.rvm/gems/ruby-2.3.1/gems/railties-4.2.7/lib/rails/initializable.rb:44:in `each'
+# /home/vagrant/.rvm/gems/ruby-2.3.1/gems/railties-4.2.7/lib/rails/initializable.rb:44:in `tsort_each_chil
+d'
+# /home/vagrant/.rvm/gems/ruby-2.3.1/gems/railties-4.2.7/lib/rails/initializable.rb:54:in `run_initializer
+s'
+# /home/vagrant/.rvm/gems/ruby-2.3.1/gems/railties-4.2.7/lib/rails/application.rb:352:in `initialize!'
+# ./config/environment.rb:5:in `<top (required)>'
+# /home/vagrant/.rvm/gems/ruby-2.3.1/gems/activesupport-4.2.7/lib/active_support/dependencies.rb:274:in `r
+equire'
+# /home/vagrant/.rvm/gems/ruby-2.3.1/gems/activesupport-4.2.7/lib/active_support/dependencies.rb:274:in `b
+lock in require'
+# /home/vagrant/.rvm/gems/ruby-2.3.1/gems/activesupport-4.2.7/lib/active_support/dependencies.rb:240:in `l
+oad_dependency'
+# /home/vagrant/.rvm/gems/ruby-2.3.1/gems/activesupport-4.2.7/lib/active_support/dependencies.rb:274:in `r
+equire'
+# ./spec/rails_helper.rb:4:in `<top (required)>'
+# /home/vagrant/.rvm/gems/ruby-2.3.1/gems/activesupport-4.2.7/lib/active_support/dependencies.rb:274:in `r
+equire'
+# /home/vagrant/.rvm/gems/ruby-2.3.1/gems/activesupport-4.2.7/lib/active_support/dependencies.rb:274:in `b
+lock in require'
+# /home/vagrant/.rvm/gems/ruby-2.3.1/gems/activesupport-4.2.7/lib/active_support/dependencies.rb:240:in `l
+oad_dependency'
+# /home/vagrant/.rvm/gems/ruby-2.3.1/gems/activesupport-4.2.7/lib/active_support/dependencies.rb:274:in `r
+equire'
+# ./spec/models/message_spec.rb:1:in `<top (required)>'
+# /home/vagrant/.rvm/gems/ruby-2.3.1/gems/activesupport-4.2.7/lib/active_support/dependencies.rb:268:in `l
+oad'
+# /home/vagrant/.rvm/gems/ruby-2.3.1/gems/activesupport-4.2.7/lib/active_support/dependencies.rb:268:in `b
+lock in load'
+# /home/vagrant/.rvm/gems/ruby-2.3.1/gems/activesupport-4.2.7/lib/active_support/dependencies.rb:240:in `l
+oad_dependency'
+# /home/vagrant/.rvm/gems/ruby-2.3.1/gems/activesupport-4.2.7/lib/active_support/dependencies.rb:268:in `l
+oad'
+
+An error occurred while loading ./spec/models/user_spec.rb.
+Failure/Error: load_dependency(file) { result = super }
+
+SyntaxError:
+  /vagrant/ruby_oct_2017/Alyssa_McKee/TTD/rspeconrails/WALLS/spec/models/user_spec.rb:28: syntax error, un
+expected keyword_end, expecting end-of-input
+    end #end registration
+       ^
+# /home/vagrant/.rvm/gems/ruby-2.3.1/gems/activesupport-4.2.7/lib/active_support/dependencies.rb:268:in `l
+oad'
+# /home/vagrant/.rvm/gems/ruby-2.3.1/gems/activesupport-4.2.7/lib/active_support/dependencies.rb:268:in `b
+lock in load'
+# /home/vagrant/.rvm/gems/ruby-2.3.1/gems/activesupport-4.2.7/lib/active_support/dependencies.rb:240:in `l
+oad_dependency'
+# /home/vagrant/.rvm/gems/ruby-2.3.1/gems/activesupport-4.2.7/lib/active_support/dependencies.rb:268:in `l
+oad'
+
+An error occurred while loading ./spec/models/wall_spec.rb.
+Failure/Error: require File.expand_path('../../config/environment', __FILE__)
+
+RuntimeError:
+  can't modify frozen Array
+# /home/vagrant/.rvm/gems/ruby-2.3.1/gems/railties-4.2.7/lib/rails/engine.rb:577:in `unshift'
+# /home/vagrant/.rvm/gems/ruby-2.3.1/gems/railties-4.2.7/lib/rails/engine.rb:577:in `block in <class:Engin
+e>'
+# /home/vagrant/.rvm/gems/ruby-2.3.1/gems/railties-4.2.7/lib/rails/initializable.rb:30:in `instance_exec'
+# /home/vagrant/.rvm/gems/ruby-2.3.1/gems/railties-4.2.7/lib/rails/initializable.rb:30:in `run'
+# /home/vagrant/.rvm/gems/ruby-2.3.1/gems/railties-4.2.7/lib/rails/initializable.rb:55:in `block in run_in
+itializers'
+# /home/vagrant/.rvm/gems/ruby-2.3.1/gems/railties-4.2.7/lib/rails/initializable.rb:44:in `each'
+# /home/vagrant/.rvm/gems/ruby-2.3.1/gems/railties-4.2.7/lib/rails/initializable.rb:44:in `tsort_each_chil
+d'
+# /home/vagrant/.rvm/gems/ruby-2.3.1/gems/railties-4.2.7/lib/rails/initializable.rb:44:in `each'
+# /home/vagrant/.rvm/gems/ruby-2.3.1/gems/railties-4.2.7/lib/rails/initializable.rb:44:in `tsort_each_chil
+d'
+# /home/vagrant/.rvm/gems/ruby-2.3.1/gems/railties-4.2.7/lib/rails/initializable.rb:44:in `each'
+# /home/vagrant/.rvm/gems/ruby-2.3.1/gems/railties-4.2.7/lib/rails/initializable.rb:44:in `tsort_each_chil
+d'
+# /home/vagrant/.rvm/gems/ruby-2.3.1/gems/railties-4.2.7/lib/rails/initializable.rb:44:in `each'
+# /home/vagrant/.rvm/gems/ruby-2.3.1/gems/railties-4.2.7/lib/rails/initializable.rb:44:in `tsort_each_chil
+d'
+# /home/vagrant/.rvm/gems/ruby-2.3.1/gems/railties-4.2.7/lib/rails/initializable.rb:54:in `run_initializer
+s'
+# /home/vagrant/.rvm/gems/ruby-2.3.1/gems/railties-4.2.7/lib/rails/application.rb:352:in `initialize!'
+# ./config/environment.rb:5:in `<top (required)>'
+# /home/vagrant/.rvm/gems/ruby-2.3.1/gems/activesupport-4.2.7/lib/active_support/dependencies.rb:274:in `r
+equire'
+# /home/vagrant/.rvm/gems/ruby-2.3.1/gems/activesupport-4.2.7/lib/active_support/dependencies.rb:274:in `b
+lock in require'
+# /home/vagrant/.rvm/gems/ruby-2.3.1/gems/activesupport-4.2.7/lib/active_support/dependencies.rb:240:in `l
+oad_dependency'
+# /home/vagrant/.rvm/gems/ruby-2.3.1/gems/activesupport-4.2.7/lib/active_support/dependencies.rb:274:in `r
+equire'
+# ./spec/rails_helper.rb:4:in `<top (required)>'
+# /home/vagrant/.rvm/gems/ruby-2.3.1/gems/activesupport-4.2.7/lib/active_support/dependencies.rb:274:in `r
+equire'
+# /home/vagrant/.rvm/gems/ruby-2.3.1/gems/activesupport-4.2.7/lib/active_support/dependencies.rb:274:in `b
+lock in require'
+# /home/vagrant/.rvm/gems/ruby-2.3.1/gems/activesupport-4.2.7/lib/active_support/dependencies.rb:240:in `l
+oad_dependency'
+# /home/vagrant/.rvm/gems/ruby-2.3.1/gems/activesupport-4.2.7/lib/active_support/dependencies.rb:274:in `r
+equire'
+# ./spec/models/wall_spec.rb:1:in `<top (required)>'
+# /home/vagrant/.rvm/gems/ruby-2.3.1/gems/activesupport-4.2.7/lib/active_support/dependencies.rb:268:in `l
+oad'
+# /home/vagrant/.rvm/gems/ruby-2.3.1/gems/activesupport-4.2.7/lib/active_support/dependencies.rb:268:in `b
+lock in load'
+# /home/vagrant/.rvm/gems/ruby-2.3.1/gems/activesupport-4.2.7/lib/active_support/dependencies.rb:240:in `l
+oad_dependency'
+# /home/vagrant/.rvm/gems/ruby-2.3.1/gems/activesupport-4.2.7/lib/active_support/dependencies.rb:268:in `l
+oad'
+No examples found.
+
+
+Finished in 0.00074 seconds (files took 33.95 seconds to load)
+0 examples, 0 failures, 4 errors occurred outside of examples
+
+vagrant@vagrant-ubuntu-trusty-64:/vagrant/ruby_oct_2017/Alyssa_McKee/TTD/rspeconrails/WALLS$ rails -v
+Rails 4.2.7
+vagrant@vagrant-ubuntu-trusty-64:/vagrant/ruby_oct_2017/Alyssa_McKee/TTD/rspeconrails/WALLS$ rspec spec
+
+An error occurred while loading ./spec/models/comment_spec.rb.
+Failure/Error: require File.expand_path('../../config/environment', __FILE__)
+
+SyntaxError:
+  /vagrant/ruby_oct_2017/Alyssa_McKee/TTD/rspeconrails/WALLS/config/routes.rb:15: syntax error, unexpected tIDENTIFIER
+  ...ssages' => 'messeges#create' as: 'create_message' #create me...
+  ...                               ^
+  /vagrant/ruby_oct_2017/Alyssa_McKee/TTD/rspeconrails/WALLS/config/routes.rb:17: syntax error, unexpected tIDENTIFIER
+  get 'walls/:name' => 'walls#index' as: 'wall' #show all for that wall
+                                       ^
+# /home/vagrant/.rvm/gems/ruby-2.3.1/gems/activesupport-4.2.7/lib/active_support/dependencies.rb:268:in `load'
+# /home/vagrant/.rvm/gems/ruby-2.3.1/gems/activesupport-4.2.7/lib/active_support/dependencies.rb:268:in `block in load
+# /home/vagrant/.rvm/gems/ruby-2.3.1/gems/activesupport-4.2.7/lib/active_support/dependencies.rb:240:in `load_dependen
+# /home/vagrant/.rvm/gems/ruby-2.3.1/gems/activesupport-4.2.7/lib/active_support/dependencies.rb:268:in `load'
+# /home/vagrant/.rvm/gems/ruby-2.3.1/gems/railties-4.2.7/lib/rails/application/routes_reloader.rb:40:in `block in load
+# /home/vagrant/.rvm/gems/ruby-2.3.1/gems/railties-4.2.7/lib/rails/application/routes_reloader.rb:40:in `each'
+# /home/vagrant/.rvm/gems/ruby-2.3.1/gems/railties-4.2.7/lib/rails/application/routes_reloader.rb:40:in `load_paths'
+# /home/vagrant/.rvm/gems/ruby-2.3.1/gems/railties-4.2.7/lib/rails/application/routes_reloader.rb:16:in `reload!'
+# /home/vagrant/.rvm/gems/ruby-2.3.1/gems/railties-4.2.7/lib/rails/application/routes_reloader.rb:26:in `block in upda
+# /home/vagrant/.rvm/gems/ruby-2.3.1/gems/activesupport-4.2.7/lib/active_support/file_update_checker.rb:75:in `execute
+# /home/vagrant/.rvm/gems/ruby-2.3.1/gems/railties-4.2.7/lib/rails/application/routes_reloader.rb:27:in `updater'
+# /home/vagrant/.rvm/gems/ruby-2.3.1/gems/railties-4.2.7/lib/rails/application/routes_reloader.rb:7:in `execute_if_upd
+# /home/vagrant/.rvm/gems/ruby-2.3.1/gems/railties-4.2.7/lib/rails/application/finisher.rb:69:in `block in <module:Fin
+# /home/vagrant/.rvm/gems/ruby-2.3.1/gems/railties-4.2.7/lib/rails/initializable.rb:30:in `instance_exec'
+# /home/vagrant/.rvm/gems/ruby-2.3.1/gems/railties-4.2.7/lib/rails/initializable.rb:30:in `run'
+# /home/vagrant/.rvm/gems/ruby-2.3.1/gems/railties-4.2.7/lib/rails/initializable.rb:55:in `block in run_initializers'
+# /home/vagrant/.rvm/gems/ruby-2.3.1/gems/railties-4.2.7/lib/rails/initializable.rb:54:in `run_initializers'
+# /home/vagrant/.rvm/gems/ruby-2.3.1/gems/railties-4.2.7/lib/rails/application.rb:352:in `initialize!'
+# ./config/environment.rb:5:in `<top (required)>'
+# ./spec/rails_helper.rb:4:in `require'
+# ./spec/rails_helper.rb:4:in `<top (required)>'
+# ./spec/models/comment_spec.rb:1:in `require'
+# ./spec/models/comment_spec.rb:1:in `<top (required)>'
+
+An error occurred while loading ./spec/models/message_spec.rb.
+Failure/Error: require File.expand_path('../../config/environment', __FILE__)
+
+RuntimeError:
+  can't modify frozen Array
+# /home/vagrant/.rvm/gems/ruby-2.3.1/gems/railties-4.2.7/lib/rails/engine.rb:577:in `unshift'
+# /home/vagrant/.rvm/gems/ruby-2.3.1/gems/railties-4.2.7/lib/rails/engine.rb:577:in `block in <class:Engine>'
+# /home/vagrant/.rvm/gems/ruby-2.3.1/gems/railties-4.2.7/lib/rails/initializable.rb:30:in `instance_exec'
+# /home/vagrant/.rvm/gems/ruby-2.3.1/gems/railties-4.2.7/lib/rails/initializable.rb:30:in `run'
+# /home/vagrant/.rvm/gems/ruby-2.3.1/gems/railties-4.2.7/lib/rails/initializable.rb:55:in `block in run_initializers'
+# /home/vagrant/.rvm/gems/ruby-2.3.1/gems/railties-4.2.7/lib/rails/initializable.rb:44:in `each'
+# /home/vagrant/.rvm/gems/ruby-2.3.1/gems/railties-4.2.7/lib/rails/initializable.rb:44:in `tsort_each_child'
+# /home/vagrant/.rvm/gems/ruby-2.3.1/gems/railties-4.2.7/lib/rails/initializable.rb:44:in `each'
+# /home/vagrant/.rvm/gems/ruby-2.3.1/gems/railties-4.2.7/lib/rails/initializable.rb:44:in `tsort_each_child'
+# /home/vagrant/.rvm/gems/ruby-2.3.1/gems/railties-4.2.7/lib/rails/initializable.rb:44:in `each'
+# /home/vagrant/.rvm/gems/ruby-2.3.1/gems/railties-4.2.7/lib/rails/initializable.rb:44:in `tsort_each_child'
+# /home/vagrant/.rvm/gems/ruby-2.3.1/gems/railties-4.2.7/lib/rails/initializable.rb:44:in `each'
+# /home/vagrant/.rvm/gems/ruby-2.3.1/gems/railties-4.2.7/lib/rails/initializable.rb:44:in `tsort_each_child'
+# /home/vagrant/.rvm/gems/ruby-2.3.1/gems/railties-4.2.7/lib/rails/initializable.rb:54:in `run_initializers'
+# /home/vagrant/.rvm/gems/ruby-2.3.1/gems/railties-4.2.7/lib/rails/application.rb:352:in `initialize!'
+# ./config/environment.rb:5:in `<top (required)>'
+# /home/vagrant/.rvm/gems/ruby-2.3.1/gems/activesupport-4.2.7/lib/active_support/dependencies.rb:274:in `require'
+# /home/vagrant/.rvm/gems/ruby-2.3.1/gems/activesupport-4.2.7/lib/active_support/dependencies.rb:274:in `block in requ
+# /home/vagrant/.rvm/gems/ruby-2.3.1/gems/activesupport-4.2.7/lib/active_support/dependencies.rb:240:in `load_dependen
+# /home/vagrant/.rvm/gems/ruby-2.3.1/gems/activesupport-4.2.7/lib/active_support/dependencies.rb:274:in `require'
+# ./spec/rails_helper.rb:4:in `<top (required)>'
+# /home/vagrant/.rvm/gems/ruby-2.3.1/gems/activesupport-4.2.7/lib/active_support/dependencies.rb:274:in `require'
+# /home/vagrant/.rvm/gems/ruby-2.3.1/gems/activesupport-4.2.7/lib/active_support/dependencies.rb:274:in `block in requ
+# /home/vagrant/.rvm/gems/ruby-2.3.1/gems/activesupport-4.2.7/lib/active_support/dependencies.rb:240:in `load_dependen
+# /home/vagrant/.rvm/gems/ruby-2.3.1/gems/activesupport-4.2.7/lib/active_support/dependencies.rb:274:in `require'
+# ./spec/models/message_spec.rb:1:in `<top (required)>'
+# /home/vagrant/.rvm/gems/ruby-2.3.1/gems/activesupport-4.2.7/lib/active_support/dependencies.rb:268:in `load'
+# /home/vagrant/.rvm/gems/ruby-2.3.1/gems/activesupport-4.2.7/lib/active_support/dependencies.rb:268:in `block in load
+# /home/vagrant/.rvm/gems/ruby-2.3.1/gems/activesupport-4.2.7/lib/active_support/dependencies.rb:240:in `load_dependen
+# /home/vagrant/.rvm/gems/ruby-2.3.1/gems/activesupport-4.2.7/lib/active_support/dependencies.rb:268:in `load'
+
+An error occurred while loading ./spec/models/user_spec.rb.
+Failure/Error: load_dependency(file) { result = super }
+
+SyntaxError:
+  /vagrant/ruby_oct_2017/Alyssa_McKee/TTD/rspeconrails/WALLS/spec/models/user_spec.rb:28: syntax error, unexpected key
+nput
+    end #end registration
+       ^
+# /home/vagrant/.rvm/gems/ruby-2.3.1/gems/activesupport-4.2.7/lib/active_support/dependencies.rb:268:in `load'
+# /home/vagrant/.rvm/gems/ruby-2.3.1/gems/activesupport-4.2.7/lib/active_support/dependencies.rb:268:in `block in load
+# /home/vagrant/.rvm/gems/ruby-2.3.1/gems/activesupport-4.2.7/lib/active_support/dependencies.rb:240:in `load_dependen
+# /home/vagrant/.rvm/gems/ruby-2.3.1/gems/activesupport-4.2.7/lib/active_support/dependencies.rb:268:in `load'
+
+An error occurred while loading ./spec/models/wall_spec.rb.
+Failure/Error: require File.expand_path('../../config/environment', __FILE__)
+
+RuntimeError:
+  can't modify frozen Array
+# /home/vagrant/.rvm/gems/ruby-2.3.1/gems/railties-4.2.7/lib/rails/engine.rb:577:in `unshift'
+# /home/vagrant/.rvm/gems/ruby-2.3.1/gems/railties-4.2.7/lib/rails/engine.rb:577:in `block in <class:Engine>'
+# /home/vagrant/.rvm/gems/ruby-2.3.1/gems/railties-4.2.7/lib/rails/initializable.rb:30:in `instance_exec'
+# /home/vagrant/.rvm/gems/ruby-2.3.1/gems/railties-4.2.7/lib/rails/initializable.rb:30:in `run'
+# /home/vagrant/.rvm/gems/ruby-2.3.1/gems/railties-4.2.7/lib/rails/initializable.rb:55:in `block in run_initializers'
+# /home/vagrant/.rvm/gems/ruby-2.3.1/gems/railties-4.2.7/lib/rails/initializable.rb:44:in `each'
+# /home/vagrant/.rvm/gems/ruby-2.3.1/gems/railties-4.2.7/lib/rails/initializable.rb:44:in `tsort_each_child'
+# /home/vagrant/.rvm/gems/ruby-2.3.1/gems/railties-4.2.7/lib/rails/initializable.rb:44:in `each'
+# /home/vagrant/.rvm/gems/ruby-2.3.1/gems/railties-4.2.7/lib/rails/initializable.rb:44:in `tsort_each_child'
+# /home/vagrant/.rvm/gems/ruby-2.3.1/gems/railties-4.2.7/lib/rails/initializable.rb:44:in `each'
+# /home/vagrant/.rvm/gems/ruby-2.3.1/gems/railties-4.2.7/lib/rails/initializable.rb:44:in `tsort_each_child'
+# /home/vagrant/.rvm/gems/ruby-2.3.1/gems/railties-4.2.7/lib/rails/initializable.rb:44:in `each'
+# /home/vagrant/.rvm/gems/ruby-2.3.1/gems/railties-4.2.7/lib/rails/initializable.rb:44:in `tsort_each_child'
+# /home/vagrant/.rvm/gems/ruby-2.3.1/gems/railties-4.2.7/lib/rails/initializable.rb:54:in `run_initializers'
+# /home/vagrant/.rvm/gems/ruby-2.3.1/gems/railties-4.2.7/lib/rails/application.rb:352:in `initialize!'
+# ./config/environment.rb:5:in `<top (required)>'
+# /home/vagrant/.rvm/gems/ruby-2.3.1/gems/activesupport-4.2.7/lib/active_support/dependencies.rb:274:in `require'
+# /home/vagrant/.rvm/gems/ruby-2.3.1/gems/activesupport-4.2.7/lib/active_support/dependencies.rb:274:in `block in requ
+# /home/vagrant/.rvm/gems/ruby-2.3.1/gems/activesupport-4.2.7/lib/active_support/dependencies.rb:240:in `load_dependen
+# /home/vagrant/.rvm/gems/ruby-2.3.1/gems/activesupport-4.2.7/lib/active_support/dependencies.rb:274:in `require'
+# ./spec/rails_helper.rb:4:in `<top (required)>'
+# /home/vagrant/.rvm/gems/ruby-2.3.1/gems/activesupport-4.2.7/lib/active_support/dependencies.rb:274:in `require'
+# /home/vagrant/.rvm/gems/ruby-2.3.1/gems/activesupport-4.2.7/lib/active_support/dependencies.rb:274:in `block in requ
+# /home/vagrant/.rvm/gems/ruby-2.3.1/gems/activesupport-4.2.7/lib/active_support/dependencies.rb:240:in `load_dependen
+# /home/vagrant/.rvm/gems/ruby-2.3.1/gems/activesupport-4.2.7/lib/active_support/dependencies.rb:274:in `require'
+# ./spec/models/wall_spec.rb:1:in `<top (required)>'
+# /home/vagrant/.rvm/gems/ruby-2.3.1/gems/activesupport-4.2.7/lib/active_support/dependencies.rb:268:in `l
+
+An error occurred while loading ./spec/models/wall_spec.rb.
+Failure/Error: require File.expand_path('../../config/environment', __FILE__)
+
+RuntimeError:
+  can't modify frozen Array
+# /home/vagrant/.rvm/gems/ruby-2.3.1/gems/railties-4.2.7/lib/rails/engine.rb:577:in `unshift'
+# /home/vagrant/.rvm/gems/ruby-2.3.1/gems/railties-4.2.7/lib/rails/engine.rb:577:in `block in <class:Engin
+# /home/vagrant/.rvm/gems/ruby-2.3.1/gems/railties-4.2.7/lib/rails/initializable.rb:30:in `instance_exec'
+# /home/vagrant/.rvm/gems/ruby-2.3.1/gems/railties-4.2.7/lib/rails/initializable.rb:30:in `run'
+# /home/vagrant/.rvm/gems/ruby-2.3.1/gems/railties-4.2.7/lib/rails/initializable.rb:55:in `block in run_in
+# /home/vagrant/.rvm/gems/ruby-2.3.1/gems/railties-4.2.7/lib/rails/initializable.rb:44:in `each'
+# /home/vagrant/.rvm/gems/ruby-2.3.1/gems/railties-4.2.7/lib/rails/initializable.rb:44:in `tsort_each_chil
+# /home/vagrant/.rvm/gems/ruby-2.3.1/gems/railties-4.2.7/lib/rails/initializable.rb:44:in `each'
+# /home/vagrant/.rvm/gems/ruby-2.3.1/gems/railties-4.2.7/lib/rails/initializable.rb:44:in `tsort_each_chil
+# /home/vagrant/.rvm/gems/ruby-2.3.1/gems/railties-4.2.7/lib/rails/initializable.rb:44:in `each'
+# /home/vagrant/.rvm/gems/ruby-2.3.1/gems/railties-4.2.7/lib/rails/initializable.rb:44:in `tsort_each_chil
+# /home/vagrant/.rvm/gems/ruby-2.3.1/gems/railties-4.2.7/lib/rails/initializable.rb:44:in `each'
+# /home/vagrant/.rvm/gems/ruby-2.3.1/gems/railties-4.2.7/lib/rails/initializable.rb:44:in `tsort_each_chil
+# /home/vagrant/.rvm/gems/ruby-2.3.1/gems/railties-4.2.7/lib/rails/initializable.rb:54:in `run_initializer
+# /home/vagrant/.rvm/gems/ruby-2.3.1/gems/railties-4.2.7/lib/rails/application.rb:352:in `initialize!'
+# ./config/environment.rb:5:in `<top (required)>'
+# /home/vagrant/.rvm/gems/ruby-2.3.1/gems/activesupport-4.2.7/lib/active_support/dependencies.rb:274:in `r
+# /home/vagrant/.rvm/gems/ruby-2.3.1/gems/activesupport-4.2.7/lib/active_support/dependencies.rb:274:in `b
+# /home/vagrant/.rvm/gems/ruby-2.3.1/gems/activesupport-4.2.7/lib/active_support/dependencies.rb:240:in `l
+# /home/vagrant/.rvm/gems/ruby-2.3.1/gems/activesupport-4.2.7/lib/active_support/dependencies.rb:274:in `r
+# ./spec/rails_helper.rb:4:in `<top (required)>'
+# /home/vagrant/.rvm/gems/ruby-2.3.1/gems/activesupport-4.2.7/lib/active_support/dependencies.rb:274:in `r
+# /home/vagrant/.rvm/gems/ruby-2.3.1/gems/activesupport-4.2.7/lib/active_support/dependencies.rb:274:in `b
+# /home/vagrant/.rvm/gems/ruby-2.3.1/gems/activesupport-4.2.7/lib/active_support/dependencies.rb:240:in `l
+# /home/vagrant/.rvm/gems/ruby-2.3.1/gems/activesupport-4.2.7/lib/active_support/dependencies.rb:274:in `r
+# ./spec/models/wall_spec.rb:1:in `<top (required)>'
+# /home/vagrant/.rvm/gems/ruby-2.3.1/gems/activesupport-4.2.7/lib/active_support/dependencies.rb:268:in `l
+# /home/vagrant/.rvm/gems/ruby-2.3.1/gems/activesupport-4.2.7/lib/active_support/dependencies.rb:268:in `b
+# /home/vagrant/.rvm/gems/ruby-2.3.1/gems/activesupport-4.2.7/lib/active_support/dependencies.rb:240:in `l
+# /home/vagrant/.rvm/gems/ruby-2.3.1/gems/activesupport-4.2.7/lib/active_support/dependencies.rb:268:in `l
+No examples found.
+
+
+Finished in 0.00118 seconds (files took 32.16 seconds to load)
+0 examples, 0 failures, 4 errors occurred outside of examples
+

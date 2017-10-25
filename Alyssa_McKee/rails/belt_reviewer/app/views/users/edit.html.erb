@@ -1,0 +1,44 @@
+<div id="container">
+	<div class="content">
+		<form class="form" action="<%= update_user_path %>" method="POST">
+			<input type="hidden" name="_method" value="put"/>
+			<h1>Edit Profile information</h1>
+			<input name="authenticity_token" value="<%=form_authenticity_token %>" type="hidden"/>
+			<div>
+				<label for="First_Name">First Name:</label>
+				<input type="text" name="user[first_name]" id="First_Name" placeholder="<%= @user.first_name %>"/>
+			</div>
+			<div>
+				<label for="Last_Name">Last Name:</label>
+				<input type="text" name="user[last_name]" id="Last_Name" placeholder="<%= @user.last_name %>"/>
+			</div>
+			<div>
+				<label for="Email">Email:</label>
+				<input type="email" name="user[email]" id="Email" placeholder="<%= @user.email %>"/>
+			</div>
+			<div>
+			<label>Location</label>
+			<input type="text" name="location[city]" placeholder="city" value="<%= @user.location.city %>" id="city"/>
+			<select name="location[state]" id="state">
+				<% @states.each do |state| %>
+					<option <% if state == @user.location.state%> selected <% end %> ><%= state %></option>
+				<% end %>
+			</select>
+		</div>
+			<% if flash[:errors] %>
+				<% flash[:errors].each do |error| %>
+					<p class="error"><%= error %></p>
+					
+					
+				<% end %>
+			<% end %>
+			<button class="green" type="Submit">Save Changes</button>
+			
+		</form>
+		<form class="form" action="<%= destroy_user_path @user.id %>" method="POST">
+			<input name="authenticity_token" value="<%=form_authenticity_token %>" type="hidden"/>
+			<input type="hidden" name="_method" value="delete"/>
+			<button class="red">Delete Account</button>
+		</form>
+	</div>
+</div>

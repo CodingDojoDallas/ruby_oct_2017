@@ -1,0 +1,12 @@
+<div id="container">
+
+	<div class="sidebar">
+		<h1><%= @user.first_name %>'s Profile</h1>
+		<% if current_user.id == @user.id %>
+			<p><a href="<%= edit_user_path @user.id %>">edit profile</a></p>
+		<% end %>
+		<h3>First Name: <%= @user.first_name %></h3>
+		<h3>Last Name: <%= @user.last_name %></h3>
+		<h3>Email: <%= @user.email %></h3>
+	</div>
+</div>

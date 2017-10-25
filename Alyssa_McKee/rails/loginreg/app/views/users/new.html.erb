@@ -1,0 +1,35 @@
+<div id="container">
+	<form class="form" action="<%= create_user_path %>" method="POST">
+		<h1>Registration</h1>
+		<input name="authenticity_token" value="<%=form_authenticity_token %>" type="hidden"/>
+		<div>
+			<label for="First_Name">First Name:</label>
+			<input type="text" name="user[first_name]" id="First_Name"/>
+		</div>
+		<div>
+			<label for="Last_Name">Last Name:</label>
+			<input type="text" name="user[last_name]" id="Last_Name"/>
+		</div>
+		<div>
+			<label for="Email">Email:</label>
+			<input type="email" name="user[email]" id="Email"/>
+		</div>
+		<div>
+			<label for="Password">Password:</label>
+			<input type="password" name="user[password]" id="Password"/>
+		</div>
+		<div>
+			<label for="Password_Con">Password Confirmation:</label>
+			<input type="password" name="user[password_confirmation]" id="Password_Con"/>
+		</div>
+		<% if flash[:errors] %>
+			<% flash[:errors].each do |error| %>
+				<p class="error"><%= error %></p>
+				
+				
+			<% end %>
+		<% end %>
+		<button class="blue" type="Submit">Register</button>
+		
+	</form>
+</div>
