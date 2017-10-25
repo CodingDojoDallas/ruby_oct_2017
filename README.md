@@ -49,6 +49,7 @@ Belt Reviewer III (Controllers) - https://youtu.be/PId5O-MWpGk <br>
 Belt Reviewer IV (Finshing Out) - https://youtu.be/XsWiIbpZfD4 <br>
 
 Self Join Many To Many - https://youtu.be/fhCNn1XTuy0 <br>
+Social Network, Self Join Many To Many https://youtu.be/_OsYvpndaX4
 
 Relations are Hard - https://youtu.be/YW6X53ia2Z8 <br>
 
