@@ -1,0 +1,15 @@
+<h2>New Dojo</h2>
+<form action="<%= dojos_create_path %>" method="post">
+  <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>"/>
+  <label>Branch:</label>
+  <input type="text" name="dojo[branch]"/>
+  <label>Street:</label>
+  <input type="text" name="dojo[street]"/>
+  <label>City:</label>
+  <input type="text" name="dojo[city]"/>
+  <label>State:</label>
+  <input type="text" name="dojo[state]"/>
+  <button type="submit">Create</button>
+
+</form>
+<a href="/dojos">Go Back</a>
